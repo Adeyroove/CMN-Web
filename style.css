@@ -3722,6 +3722,7 @@ body:not(.device-touch) .grid-container {
 	-webkit-transition: all .2s linear;
 	-o-transition: all .2s linear;
 	transition: all .2s linear;
+	margin-bottom: 10px;
 }
 
 .portfolio-shuffle:hover {

@@ -17,7 +17,7 @@
 
 	<!-- Construction Demo Specific Stylesheet -->
 	<!-- Ini nanti di cek lagi ya -->
-	<link rel="stylesheet" href="demos/construction/cmn.css" type="text/css" />
+	<link rel="stylesheet" href="cmn.css" type="text/css" />
 	<!-- / -->
 
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -41,9 +41,21 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>Citra Mandiri Percetakan Jakarta | Jasa Cetak Offset Online Murah</title>
+	<title>Produk Percetakan Murah | Citra Mandiri Percetakan Jakarta</title>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+	<link rel="icon" type="image/png" href="citra-mandiri-favicon-set-white/favicon-32x32.png" sizes="16x16" />
+	
+	<link rel="apple-touch-icon" href="citra-mandiri-favicon-set-white/apple-touch-icon-60x60.png"png">
+	
+	<link rel="apple-touch-icon" sizes="76x76" href="citra-mandiri-favicon-set-white/apple-touch-icon-76x76.png">
+	
+	<link rel="apple-touch-icon" sizes="120x120" href="citra-mandiri-favicon-set-white/apple-touch-icon-120x120.png">
+	
+	<link rel="apple-touch-icon" sizes="152x152" href="citra-mandiri-favicon-set-white/apple-touch-icon-152x152.png">
+
 </head>
 <body class="stretched">
 
@@ -140,27 +152,27 @@
 										<ul>
 											<li 
 											id="kuningin"
-											class="current"><a href="#">
+											class="current"><a href="index.html">
 													<div>Home</div>
 											</a></li>
-											<li><a href="demos/construction/about-us.html">
+											<li><a href="tentangkami.html">
 												<div>Tentang Kami</div>
 											</a></li>
-											<li><a href="produk.html">
+											<li><a href="#">
 												<div>Produk Kami</div>
 												</a>
 												
 												<ul>
-													<li><a href="#">
+													<li><a href="produk.html#.pf-kebutuhan-pemasaran">
 														<div>Kebutuhan Pemasaran</div>
 													</a></li>
-													<li><a href="#">
+													<li><a href="produk.html#.pf-keperluan-kantor">
 														<div>Keperluan Kantor</div>
 													</a></li>
-													<li><a href="#">
+													<li><a href="produk.html#.kemasan-packaging">
 														<div>Kemasan / Packaging</div>
 													</a></li>
-													<li><a href="#">
+													<li><a href="produk.html#.pf-lainnya">
 														<div>Lainnya</div>
 													</a></li>
 												</ul>
@@ -201,8 +213,8 @@
 								<li class="activeFilter"><a href="#" data-filter="*">Semua Produk</a></li>
 								<li><a href="#" data-filter=".pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></li>
 								<li><a href="#" data-filter=".pf-keperluan-kantor">Keperluan Kantor</a></li>
-								<li><a href="#" data-filter=".pf-sunglass">Kemasan / Packaging</a></li>
-								<li><a href="#" data-filter=".pf-watch">Lainnya</a></li>
+								<li><a href="#" data-filter=".pf-kemasan-packaging">Kemasan / Packaging</a></li>
+								<li><a href="#" data-filter=".pf-lainnya">Lainnya</a></li>
 							</ul><!-- #portfolio-filter end -->
 							
 											
@@ -584,7 +596,20 @@ jQuery(document).ready(function($) {
 		}
 	});
 });
-			
+jQuery(document).ready(function() {
+	let hashFilter = location.hash;
+	hashFilter = hashFilter.split('#');
+	if (hashFilter[1]) {
+		let filterItem = $('.portfolio-filter').find('[data-filter="' + hashFilter[1] + '"]'),
+			filterCon = filterItem.parents('.portfolio-filter').attr('data-container');
+		filterItem.parent('li').siblings().removeClass('activeFilter');
+		filterItem.parent('li').addClass('activeFilter');
+		$(filterCon).isotope({
+			filter: hashFilter[1]
+		});
+	}
+});
+
 				</script>
 		</header>
 	</div>
