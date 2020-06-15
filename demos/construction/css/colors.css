@@ -127,9 +127,11 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 .sidenav > .ui-tabs-active > a,
 .sidenav > .ui-tabs-active > a:hover,
 .owl-carousel .owl-controls .owl-nav [class*=owl-]:hover,
+{ background-color: #1a1a4e !important; }
+
 .page-link,
 .page-link:hover,
-.page-link:focus { background-color: #1a1a4e !important; }
+.page-link:focus 
 
 #primary-menu.style-4 > ul > li:hover > a,
 #primary-menu.style-4 > ul > li.current > a,

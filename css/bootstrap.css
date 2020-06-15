@@ -2595,14 +2595,32 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
 	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
+	background-color: #1C535E;
+	border-color: #1C535E;
+}
+
+.btn-center {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%
 }
 
 .btn-secondary:hover {
 	color: #fff;
-	background-color: #5a6268;
-	border-color: #545b62;
+	background-color: #C7CEDB;
+	border-color: #C7CEDB;
+}
+
+.btn-secondary2 {
+	color: #fff;
+	background-color: #1A1A4E;
+	border-color: #1A1A4E;
+}
+
+.btn-secondary2:hover {
+	color: #fff;
+	background-color: #C7CEDB;
+	border-color: #C7CEDB;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
