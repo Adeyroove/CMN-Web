@@ -3232,6 +3232,9 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
 
 .swiper_wrapper {
 	width: 100%;
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
 	height: 500px;
 	height: var(--slider-height-lg);
 	overflow: hidden;
