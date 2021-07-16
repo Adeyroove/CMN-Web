@@ -1,0 +1,66 @@
+.spesifikasi_title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+
+.spesifikasi_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.spesifikasi_flex_container {
+  flex: 1;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.spesifikasi_flex_container_active {
+  border: 1px solid cornflowerblue;
+  color: cornflowerblue;
+  font-weight: 700;
+}
+
+.spesifikasi_flex_container_disabled {
+  border: 1px solid #d9d9d9 !important;
+  background: #d9d9d9;
+  color: darkgrey;
+  cursor: not-allowed;
+}
+
+.spesifikasi_flex_container:hover {
+  border: 1px solid cornflowerblue;
+}
+
+.spesifikasi_flex_container input {
+  margin-right: 5px;
+}
+
+.spesifikasi_button_chat {
+  max-width: 250px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  background: #25D366;
+  border: 1px solid #25D366;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+}
+
+.spesifikasi_button_chat:hover {
+  background: #128C7E;
+  border: 1px solid #128C7E;
+}
