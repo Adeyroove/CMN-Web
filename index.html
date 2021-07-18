@@ -74,6 +74,21 @@
 	<link rel="apple-touch-icon" sizes="120x120" href="citra-mandiri-favicon-set-white/apple-touch-icon-120x120.png">
 	
 	<link rel="apple-touch-icon" sizes="152x152" href="citra-mandiri-favicon-set-white/apple-touch-icon-152x152.png">
+
+	<style>
+		.font-kategori-beranda {
+			font-size: 16px;
+		}
+		@media only screen and (max-width: 768px) {
+			.font-kategori-beranda {
+				font-size: 13px;
+			}
+			.kategori-image-beranda {
+				border-right: 1px solid white;	
+			}
+		}
+	</style>
+
 </head>
 
 <!-- ini body section -->
@@ -406,14 +421,11 @@
 			</div>
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element swiper_wrapper clearfix" style="height: 200px;" data-autoplay="93500" data-speed="500" data-loop="true">
+		<!-- <section id="slider" class="slider-element swiper_wrapper clearfix" style="height: 200px;" data-autoplay="93500" data-speed="500" data-loop="true">
 			<div class="swiper-container swiper-parent">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background-image: url('images-banner/banner-website-01.png'); background-position: center top;"></div>
-					<!-- <div class="swiper-slide" style="background-image: url('images-new/banner-packaging-1440x550.jpg'); background-position: center top;"></div>
-					<div class="swiper-slide" style="background-image: url('images-new/Promo-Diskon-Flyer-1440x550.jpg'); background-position: center top;"></div>
-					<div class="swiper-slide" style="background-image: url('images-new/Tripod Banner3-1440x550.jpg'); background-position: center top;"></div>
-					<div class="swiper-slide" style="background-image: url('images-new/banner-kebutuhan-kantor-website1440x550.jpg'); background-position: center top;"></div> -->
+					<div class="swiper-slide" style="background-image: url('images-banner/banner-website-01.png'); background-position: left;"></div>
+					
 				</div>
 				
 				<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
@@ -422,12 +434,17 @@
 				
 				<div class="swiper-pagination"></div>
 			</div>
-		</section>
+		</section> -->
+		<!-- <img alt="banner-01" src="images-banner/banner-website-01.png" style="width: 100%; height: auto" /> -->
 
 		<!-- Content
 		============================================= -->
+		<div style="width:100%;max-width:1140px;margin:auto;max-height:200px;background:#d9d9d9;margin-bottom: 20px;">
+			<img src="images-banner/banner-website-01.png" alt="citramandiri cetak Keperluan anda" style="width: 100%;height: auto;">
+		</div>
+
 		<section id="content">
-			<div class="content-wrap" style="padding:30px 0">
+			<div class="content-wrap" style="padding:0">
 				<!--<div class="promo promo-light promo-full uppercase bottommargin-lg header-stick">
 					<div class="container clearfix">
 						<h3 style="letter-spacing: 2px;">Cetak Produk Apapun</h3>
@@ -441,7 +458,7 @@
 				<div style="max-width:1100;margin-left:auto;margin-right:auto;">
 				<div id="portfolio" class="portfolio grid-container clearfix" style="margin-bottom:30px;">
 					<article class="portfolio-item pf-graphics pf-uielements" style="width:33%;">
-						<div class="portfolio-image">
+						<div class="portfolio-image kategori-image-beranda">
 							<img src="images-banner/banner-cover-kategori-kemasan_stiker.png" alt="kemasan & stiker">
 							
 							<div class="portfolio-overlay"><a href="kemasan-&-stiker" class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
@@ -449,11 +466,11 @@
 						
 						<div class="portfolio-desc">
 							<!-- <h3><a href="produk/brosur">Brosur</a></h3> -->
-							<span style="display:inline-block;width: 100%;text-align: center;font-size:16px;"><a href="kemasan-&-stiker">Kemasan & Stiker</a></span></div>
+							<span class="font-kategori-beranda" style="display:inline-block;width: 100%;text-align: center;"><a href="kemasan-&-stiker">Kemasan & Stiker</a></span></div>
 					</article>
 					
 					<article class="portfolio-item pf-icons pf-illustrations" style="width:33%;">
-						<div class="portfolio-image">
+						<div class="portfolio-image kategori-image-beranda">
 							<img src="images-banner/banner-cover-kategori-perlengkapan-kantor.png" alt="perlengkapan kantor">
 							
 							<div class="portfolio-overlay"><a href="perlengkapan-kantor" class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
@@ -461,11 +478,11 @@
 						
 						<div class="portfolio-desc">
 							<!-- <h3><a href="produk/flyer">Flyer</a></h3> -->
-							<span style="display:inline-block;width: 100%;text-align: center;font-size:16px;"><a href="perlengkapan-kantor">Perlengkapan Kantor</a></span></div>
+							<span class="font-kategori-beranda" style="display:inline-block;width: 100%;text-align: center;"><a href="perlengkapan-kantor">Perlengkapan Kantor</a></span></div>
 					</article>
 					
 					<article class="portfolio-item pf-uielements pf-media" style="width:33%;">
-						<div class="portfolio-image">
+						<div class="portfolio-image kategori-image-beranda">
 							<img src="images-banner/banner-cover-kategori-kebutuhan-marketing.png" alt="kebutuhan marketing">
 							
 							<div class="portfolio-overlay"><a href="kebutuhan-marketing"class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
@@ -473,7 +490,7 @@
 						
 						<div class="portfolio-desc">
 							<!-- <h3><a href="produk/stiker">Stiker</a></h3> -->
-							<span style="display:inline-block;width: 100%;text-align:center;font-size:16px;"><a href="kebutuhan-marketing">Kebutuhan Marketing</a></span></div>
+							<span class="font-kategori-beranda" style="display:inline-block;width: 100%;text-align:center;"><a href="kebutuhan-marketing">Kebutuhan Marketing</a></span></div>
 					</article>
 
 				</div>
@@ -511,53 +528,6 @@
 				</div>
 				
 				<div id="portfolio" class="portfolio grid-container clearfix">
-					<article class="portfolio-item pf-graphics pf-uielements">
-						<div class="portfolio-image">
-							<img src="images-new/produk-cmn/brosur.jpg" alt="Brosur">
-							
-							<div class="portfolio-overlay"><a href="produk/brosur" class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
-						</div>
-						
-						<div class="portfolio-desc">
-							<h3><a href="produk/brosur">Brosur</a></h3>
-							<span><a href="produk#.pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></span></div>
-					</article>
-					
-					<article class="portfolio-item pf-icons pf-illustrations">
-						<div class="portfolio-image">
-							<img src="images-new/produk-cmn/flyer.jpg" alt="Flyer">
-							
-							<div class="portfolio-overlay"><a href="produk/flyer" class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
-						</div>
-						
-						<div class="portfolio-desc">
-							<h3><a href="produk/flyer">Flyer</a></h3>
-							<span><a href="produk#.pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></span></div>
-					</article>
-					
-					<article class="portfolio-item pf-uielements pf-media">
-						<div class="portfolio-image">
-							<img src="images-new/produk-cmn/stiker.jpg" alt="Stiker">
-							
-							<div class="portfolio-overlay"><a href="produk/stiker"class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
-						</div>
-						
-						<div class="portfolio-desc">
-							<h3><a href="produk/stiker">Stiker</a></h3>
-							<span><a href="produk#.pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></span></div>
-					</article>
-					
-					<article class="portfolio-item pf-uielements pf-media">
-						<div class="portfolio-image">
-							<img src="images-baru/mockup-rice-box-01.png" alt="Rice Box">
-							
-							<div class="portfolio-overlay"><a href="produk/rice-box"class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
-						</div>
-						
-						<div class="portfolio-desc">
-							<h3><a href="produk/rice-box">Rice Box</a></h3>
-							<span><a href="produk/rice-box">Kemasan & Stiker</a></span></div>
-					</article>
 					
 					<article class="portfolio-item pf-uielements pf-media">
 						<div class="portfolio-image">
@@ -585,14 +555,14 @@
 					
 					<article class="portfolio-item pf-uielements pf-media">
 						<div class="portfolio-image">
-							<img src="images-baru/mockup-drug-box-01.png" alt="Drug Box">
+							<img src="images-baru/mockup-rice-box-01.png" alt="Rice Box">
 							
-							<div class="portfolio-overlay"><a href="produk/drug-box"class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
+							<div class="portfolio-overlay"><a href="produk/rice-box"class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
 						</div>
 						
 						<div class="portfolio-desc">
-							<h3><a href="produk/drug-box">Drug Box</a></h3>
-							<span><a href="produk/drug-box">Kemasan & Stiker</a></span></div>
+							<h3><a href="produk/rice-box">Rice Box</a></h3>
+							<span><a href="produk/rice-box">Kemasan & Stiker</a></span></div>
 					</article>
 					
 					<article class="portfolio-item pf-uielements pf-media">
@@ -605,6 +575,54 @@
 						<div class="portfolio-desc">
 							<h3><a href="produk/surgical-mask-box">Surgical Mask Box</a></h3>
 							<span><a href="produk/surgical-mask-box">Kemasan & Stiker</a></span></div>
+					</article>
+					
+					<article class="portfolio-item pf-uielements pf-media">
+						<div class="portfolio-image">
+							<img src="images-baru/mockup-drug-box-01.png" alt="Drug Box">
+							
+							<div class="portfolio-overlay"><a href="produk/drug-box"class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
+						</div>
+						
+						<div class="portfolio-desc">
+							<h3><a href="produk/drug-box">Drug Box</a></h3>
+							<span><a href="produk/drug-box">Kemasan & Stiker</a></span></div>
+					</article>
+					
+					<article class="portfolio-item pf-uielements pf-media">
+						<div class="portfolio-image">
+							<img src="images-new/produk-cmn/stiker.jpg" alt="Stiker">
+							
+							<div class="portfolio-overlay"><a href="produk/stiker"class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
+						</div>
+						
+						<div class="portfolio-desc">
+							<h3><a href="produk/stiker">Stiker</a></h3>
+							<span><a href="produk#.pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></span></div>
+					</article>
+					
+					<article class="portfolio-item pf-graphics pf-uielements">
+						<div class="portfolio-image">
+							<img src="images-new/produk-cmn/brosur.jpg" alt="Brosur">
+							
+							<div class="portfolio-overlay"><a href="produk/brosur" class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
+						</div>
+						
+						<div class="portfolio-desc">
+							<h3><a href="produk/brosur">Brosur</a></h3>
+							<span><a href="produk#.pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></span></div>
+					</article>
+					
+					<article class="portfolio-item pf-icons pf-illustrations">
+						<div class="portfolio-image">
+							<img src="images-new/produk-cmn/flyer.jpg" alt="Flyer">
+							
+							<div class="portfolio-overlay"><a href="produk/flyer" class="center-icon"><i class="icon-line-ellipsis"></i></a></div>
+						</div>
+						
+						<div class="portfolio-desc">
+							<h3><a href="produk/flyer">Flyer</a></h3>
+							<span><a href="produk#.pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></span></div>
 					</article>
 					
 					<article class="portfolio-item pf-graphics pf-uielements">
