@@ -457,7 +457,7 @@ gtag('config', 'UA-145006215-1');
 							
 											
 							<div style="font-weight: 700;font-size: 24px;">Daftar Harga</div>
-							<div id="daftar_harga">
+							<div id="daftar_harga" style="overflow: auto;">
 							<table class="table table-striped table-bordered" style="margin-bottom:40px;">
 								<tbody>
 									<tr>
@@ -935,35 +935,6 @@ gtag('config', 'UA-145006215-1');
 			});
 
 		});
-
-	</script>
-
-	<script>
-
-		// select ukuran 
-		function select_ukuran(id) {
-			
-			for(var i = 0; i < 4; i++){
-				if(i == id){
-					console.log(id)
-					if(!document.getElementById(`pilihan_ukuran_cont_${id}`).classList.contains('spesifikasi_flex_container_active')){
-						document.getElementById(`pilihan_ukuran_cont_${id}`).classList.add('spesifikasi_flex_container_active');
-					}
-					// elem_input.setAttribute("checked", true);
-				} else {
-					if(document.getElementById(`pilihan_ukuran_cont_${id}`).classList.contains('spesifikasi_flex_container_active')){
-						document.getElementById(`pilihan_ukuran_cont_${id}`).classList.remove('spesifikasi_flex_container_active');
-					}
-				}
-			}
-
-		}
-
-		// select bahan
-
-		// select warna
-
-		// update price list
 
 	</script>
 
