@@ -106,6 +106,12 @@ gtag('config', 'UA-145006215-1');
 	<link rel="apple-touch-icon" sizes="120x120" href="../../citra-mandiri-favicon-set-white/apple-touch-icon-120x120.png">
 	
 	<link rel="apple-touch-icon" sizes="152x152" href="../../citra-mandiri-favicon-set-white/apple-touch-icon-152x152.png">
+	
+	<style>
+		.pilihan_ukuran_custom_hide {
+			display: none !important;
+		}
+	</style>
 </head>
 <body class="stretched no-transition">
 
@@ -391,8 +397,34 @@ gtag('config', 'UA-145006215-1');
 										<div>10 x 10 cm</div>
 									</div>
 									<div class="spesifikasi_flex_container" id="pilihan_ukuran_cont_6" onClick="select_ukuran(6)">
-										<input type="radio" name="pilihan_ukuran" value="custom" id="pilihan_ukuran_input_6" />
+										<input type="radio" name="pilihan_ukuran" value="Custom" id="pilihan_ukuran_input_6" />
 										<div>Custom</div>
+									</div>
+								</div>
+								<div class="pilihan_ukuran_custom_hide" id="pilihan_ukuran_custom_container" 
+									style="display: flex; justify-content: space-between;align-items: center;flex-wrap: wrap;
+									padding:5px;background: white;border-radius:6px;margin-top:7px;
+									border:1px solid cornflowerblue;
+									"
+								>
+									<div style="margin-right: 5px;width:203px;">
+										<div style="padding-left: 5px;margin-bottom:3px;">Custom Panjang (cm)</div>
+										<input 
+										id="ukuran_custom_panjang_stiker"
+										value="4"
+										onkeypress="return isNumberKey(event)"
+										placeholder="panjang" style="background:#f5f5f5;border:1px solid #d9d9d9;border-radius:4px;width: 100%;padding:5px 10px;" />
+									</div>
+									<div style="width:203px;">
+										<div style="padding-left: 5px;margin-bottom:3px;">Custom Lebar (cm)</div>
+										<input 
+										id="ukuran_custom_lebar_stiker"
+										value="4"
+										onkeypress="return isNumberKey(event)"
+										placeholder="lebar" style="background:#f5f5f5;border:1px solid #d9d9d9;border-radius:4px;width: 100%;padding:5px 10px;" />
+									</div>
+									<div style="width: 100%;font-size: 11px;padding-top:7px;color:darkgrey;">
+										* minimal ukuran 2 x 2 cm dan maksimal 30 x 45 cm
 									</div>
 								</div>
 								
@@ -496,7 +528,7 @@ gtag('config', 'UA-145006215-1');
 										<td style="text-align: center;"><span id="qty_1_stiker_table">70</span> pcs</td>
 										<td style="text-align: center;">1 lembar</td>
 										<td style="text-align: center;">Rp. 15.000</td>
-										<td style="text-align: center;">Rp. 15.000</td>
+										<td style="text-align: center;"><span id="qty_1_stiker_table_harga">Rp. 15.000</span></td>
 										<td id="pesan_sekarang_stiker_1"><div class="spesifikasi_button_chat"
 											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%204%20x%204%20cm%20Vinyl%20Kiss%20Cut%2070%20pcs', '_blank')"
 											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
@@ -506,7 +538,7 @@ gtag('config', 'UA-145006215-1');
 										<td style="text-align: center;"><span id="qty_2_stiker_table">140</span> pcs</td>
 										<td style="text-align: center;">2 lembar</td>
 										<td style="text-align: center;">Rp. 15.000</td>
-										<td style="text-align: center;">Rp. 30.000</td>
+										<td style="text-align: center;"><span id="qty_2_stiker_table_harga">Rp. 30.000</span></td>
 										<td id="pesan_sekarang_stiker_2"><div class="spesifikasi_button_chat"
 											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%204%20x%204%20cm%20Vinyl%20Kiss%20Cut%20140%20pcs', '_blank')"
 											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
@@ -516,7 +548,7 @@ gtag('config', 'UA-145006215-1');
 										<td style="text-align: center;"><span id="qty_3_stiker_table">210</span> pcs</td>
 										<td style="text-align: center;">3 lembar</td>
 										<td style="text-align: center;">Rp. 15.000</td>
-										<td style="text-align: center;">Rp. 45.000</td>
+										<td style="text-align: center;"><span id="qty_3_stiker_table_harga">Rp. 45.000</span></td>
 										<td id="pesan_sekarang_stiker_3"><div class="spesifikasi_button_chat"
 											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%204%20x%204%20cm%20Vinyl%20Kiss%20Cut%20210%20pcs', '_blank')"
 											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
@@ -526,7 +558,7 @@ gtag('config', 'UA-145006215-1');
 										<td style="text-align: center;"><span id="qty_4_stiker_table">350</span> pcs</td>
 										<td style="text-align: center;">5 lembar</td>
 										<td style="text-align: center;">Rp. 15.000</td>
-										<td style="text-align: center;">Rp. 75.000</td>
+										<td style="text-align: center;"><span id="qty_4_stiker_table_harga">Rp. 75.000</span></td>
 										<td id="pesan_sekarang_stiker_4"><div class="spesifikasi_button_chat"
 											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%204%20x%204%20cm%20Vinyl%20Kiss%20Cut%20350%20pcs', '_blank')"
 											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
@@ -536,7 +568,7 @@ gtag('config', 'UA-145006215-1');
 										<td style="text-align: center;"><span id="qty_5_stiker_table">700</span> pcs</td>
 										<td style="text-align: center;">10 lembar</td>
 										<td style="text-align: center;">Rp. 15.000</td>
-										<td style="text-align: center;">Rp. 150.000</td>
+										<td style="text-align: center;"><span id="qty_5_stiker_table_harga">Rp. 150.000</span></td>
 										<td id="pesan_sekarang_stiker_5"><div class="spesifikasi_button_chat"
 											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%204%20x%204%20cm%20Vinyl%20Kiss%20Cut%20700%20pcs', '_blank')"
 											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
@@ -546,7 +578,7 @@ gtag('config', 'UA-145006215-1');
 										<td style="text-align: center;"><span id="qty_6_stiker_table">1400</span> pcs</td>
 										<td style="text-align: center;">20 lembar</td>
 										<td style="text-align: center;">Rp. 15.000</td>
-										<td style="text-align: center;">Rp. 300.000</td>
+										<td style="text-align: center;"><span id="qty_6_stiker_table_harga">Rp. 300.000</span></td>
 										<td id="pesan_sekarang_stiker_6"><div class="spesifikasi_button_chat"
 											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%204%20x%204%20cm%20Vinyl%20Kiss%20Cut%201400%20pcs', '_blank')"
 											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
@@ -893,6 +925,14 @@ gtag('config', 'UA-145006215-1');
 				jQuery('#oc-images').trigger('to.owl.carousel', [Number(imageLink) - 1]);
 				return false;
 			});
+			
+			$("#ukuran_custom_panjang_stiker").on('change keydown paste input', function(){
+      	customHandler("ukuran", "p", $(this).val());
+			});
+
+			$("#ukuran_custom_lebar_stiker").on('change keydown paste input', function(){
+      	customHandler("ukuran", "l", $(this).val())
+			});
 
 		});
 
@@ -990,15 +1030,72 @@ gtag('config', 'UA-145006215-1');
 
 			if (ukuran === "4 x 4 cm") {
 				quantity = 70;
+				// set panjang & lebar custom
+				if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.add('pilihan_ukuran_custom_hide');
+				}
+				document.getElementById("ukuran_custom_panjang_stiker").value = "4";
+				document.getElementById("ukuran_custom_lebar_stiker").value = "4";
+
 			} else if (ukuran === "4 x 6 cm") {
 				quantity = 40;
+				// set panjang & lebar custom
+				if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.add('pilihan_ukuran_custom_hide');
+				}
+				document.getElementById("ukuran_custom_panjang_stiker").value = "4";
+				document.getElementById("ukuran_custom_lebar_stiker").value = "6";
+
 			} else if (ukuran === "5 x 5 cm") {
 				quantity = 47;
+				// set panjang & lebar custom
+				if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.add('pilihan_ukuran_custom_hide');
+				}
+				document.getElementById("ukuran_custom_panjang_stiker").value = "5";
+				document.getElementById("ukuran_custom_lebar_stiker").value = "5";
+
 			} else if (ukuran === "6 x 8 cm") {
 				quantity = 22;
+				// set panjang & lebar custom
+				if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.add('pilihan_ukuran_custom_hide');
+				}
+				document.getElementById("ukuran_custom_panjang_stiker").value = "6";
+				document.getElementById("ukuran_custom_lebar_stiker").value = "8";
+
 			} else if (ukuran === "10 x 10 cm") {
 				quantity = 12;
+				// set panjang & lebar custom
+				if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.add('pilihan_ukuran_custom_hide');
+				}
+				document.getElementById("ukuran_custom_panjang_stiker").value = "10";
+				document.getElementById("ukuran_custom_lebar_stiker").value = "10";
+
 			} else if (ukuran === "Custom") {
+
+				// show panjang dan lebar
+				if(document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.remove('pilihan_ukuran_custom_hide');
+				}
+
+				let panjang = document.getElementById("ukuran_custom_panjang_stiker").value;
+				let lebar = document.getElementById("ukuran_custom_lebar_stiker").value;
+
+				text_order = "Custom ("+"%20"+panjang+"%20"+"x"+"%20"+lebar+"%20"+"cm)"+"%20"+bahan.replace(" ", "%20")+"%20"+potong.replace(" ", "%20");
+
+				if(panjang == "4" && lebar == "4"){	
+					quantity = 70;
+				} else if(panjang == "4" && lebar == "6"){
+					quantity = 40;
+				} else if(panjang == "5" && lebar == "5"){
+					quantity = 47;
+				} else if(panjang == "6" && lebar == "8"){
+					quantity = 22;
+				} else if(panjang == "10" && lebar == "10"){
+					quantity = 12;
+				}
 
 			}
 			
@@ -1013,6 +1110,13 @@ gtag('config', 'UA-145006215-1');
 		document.getElementById("qty_4_stiker_table").innerHTML = quantity*5;
 		document.getElementById("qty_5_stiker_table").innerHTML = quantity*10;
 		document.getElementById("qty_6_stiker_table").innerHTML = quantity*20;
+		
+		document.getElementById("qty_1_stiker_table_harga").innerHTML = "Rp. 15.000";
+		document.getElementById("qty_2_stiker_table_harga").innerHTML = "Rp. 30.000";
+		document.getElementById("qty_3_stiker_table_harga").innerHTML = "Rp. 45.000";
+		document.getElementById("qty_4_stiker_table_harga").innerHTML = "Rp. 75.000";
+		document.getElementById("qty_5_stiker_table_harga").innerHTML = "Rp. 150.000";
+		document.getElementById("qty_6_stiker_table_harga").innerHTML = "Rp. 300.000";
 
 		document.getElementById("pesan_sekarang_stiker_1").innerHTML = `
 			<div class="spesifikasi_button_chat"
@@ -1067,6 +1171,8 @@ gtag('config', 'UA-145006215-1');
 	}
 
 	function tambah_custom() {
+		let quantity = parseInt(document.getElementById("qty_stiker_custom").value) + parseInt(document.getElementById("qty_stiker_minimal").innerHTML);
+		if(parseInt(quantity) > 0){
 		let ukuran = "";
 		let bahan = "";
 		let potong = "";
@@ -1096,7 +1202,15 @@ gtag('config', 'UA-145006215-1');
 		}
 		// ////////////////////////////////////////////////////////////
 		let text_order = ukuran.replace(" ", "%20")+"%20"+bahan.replace(" ", "%20")+"%20"+potong.replace(" ", "%20");
-		let quantity = parseInt(document.getElementById("qty_stiker_custom").value) + parseInt(document.getElementById("qty_stiker_minimal").innerHTML);
+		
+		if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+
+			let panjang = document.getElementById("ukuran_custom_panjang_stiker").value;
+			let lebar = document.getElementById("ukuran_custom_lebar_stiker").value;
+
+			text_order = "Custom ("+"%20"+panjang+"%20"+"x"+"%20"+lebar+"%20"+"cm)"+"%20"+bahan.replace(" ", "%20")+"%20"+potong.replace(" ", "%20");
+		}
+		
 		document.getElementById("qty_stiker_custom").value = quantity;
 		
 		document.getElementById("pesan_sekarang_custom").innerHTML = `
@@ -1104,9 +1218,12 @@ gtag('config', 'UA-145006215-1');
 											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity}%20pcs', '_blank')"
 											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
 		`;
+		}
 	}
 
 	function kurangi_custom() {
+		let quantity = parseInt(document.getElementById("qty_stiker_custom").value) - parseInt(document.getElementById("qty_stiker_minimal").innerHTML);
+		if(parseInt(quantity) > 0){
 		let ukuran = "";
 		let bahan = "";
 		let potong = "";
@@ -1136,7 +1253,15 @@ gtag('config', 'UA-145006215-1');
 		}
 		// ////////////////////////////////////////////////////////////
 		let text_order = ukuran.replace(" ", "%20")+"%20"+bahan.replace(" ", "%20")+"%20"+potong.replace(" ", "%20");
-		let quantity = parseInt(document.getElementById("qty_stiker_custom").value) - parseInt(document.getElementById("qty_stiker_minimal").innerHTML);
+		
+		if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+
+		let panjang = document.getElementById("ukuran_custom_panjang_stiker").value;
+		let lebar = document.getElementById("ukuran_custom_lebar_stiker").value;
+
+		text_order = "Custom ("+"%20"+panjang+"%20"+"x"+"%20"+lebar+"%20"+"cm)"+"%20"+bahan.replace(" ", "%20")+"%20"+potong.replace(" ", "%20");
+		}
+		
 		if( quantity > 0){
 			document.getElementById("qty_stiker_custom").value = quantity;
 			
@@ -1146,6 +1271,238 @@ gtag('config', 'UA-145006215-1');
 												><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
 			`;
 		}
+		}
+	}
+	
+	function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
+
+  function customHandler(name, option, value) {
+		if(value){
+			if(parseFloat(value) >= 2){
+				update_harga_custom();
+			} else {
+				setTimeout(() => {
+					if(option == "p"){
+						if(value == document.getElementById("ukuran_custom_panjang_stiker").value){
+							document.getElementById("ukuran_custom_panjang_stiker").value = "2";
+							update_harga_custom();
+						}
+					} else {
+						if(value == document.getElementById("ukuran_custom_lebar_stiker").value){
+							document.getElementById("ukuran_custom_lebar_stiker").value = "2";
+							update_harga_custom();
+						}
+					}
+				}, 2000);
+			}
+		} else {
+			update_harga_custom();
+		}
+  }
+
+	function update_harga_custom() {
+		let panjang = document.getElementById("ukuran_custom_panjang_stiker").value;
+		let lebar = document.getElementById("ukuran_custom_lebar_stiker").value;
+
+		if(panjang){ panjang = parseFloat(panjang); }
+		if(lebar){ lebar = parseFloat(lebar); }
+
+		if(panjang && lebar > 0){
+			harga_custom_enabled(panjang, lebar);
+		} else {
+			harga_custom_disabled();
+		}
+	}
+
+	function harga_custom_disabled(){
+		
+		// update quantity & harga & button 1, 2, 3, 4, 5, 6
+		document.getElementById("qty_1_stiker_table").innerHTML = "";
+		document.getElementById("qty_2_stiker_table").innerHTML = "";
+		document.getElementById("qty_3_stiker_table").innerHTML = "";
+		document.getElementById("qty_4_stiker_table").innerHTML = "";
+		document.getElementById("qty_5_stiker_table").innerHTML = "";
+		document.getElementById("qty_6_stiker_table").innerHTML = "";
+		
+		document.getElementById("qty_1_stiker_table_harga").innerHTML = "";
+		document.getElementById("qty_2_stiker_table_harga").innerHTML = "";
+		document.getElementById("qty_3_stiker_table_harga").innerHTML = "";
+		document.getElementById("qty_4_stiker_table_harga").innerHTML = "";
+		document.getElementById("qty_5_stiker_table_harga").innerHTML = "";
+		document.getElementById("qty_6_stiker_table_harga").innerHTML = "";
+
+			document.getElementById("pesan_sekarang_stiker_1").innerHTML = `
+			<div class="spesifikasi_button_chat" style="border:1px solid #d9d9d9;background:#d9d9d9;color:grey;cursor:not-allowed;"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_2").innerHTML = `
+			<div class="spesifikasi_button_chat" style="border:1px solid #d9d9d9;background:#d9d9d9;color:grey;cursor:not-allowed;"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_3").innerHTML = `
+			<div class="spesifikasi_button_chat" style="border:1px solid #d9d9d9;background:#d9d9d9;color:grey;cursor:not-allowed;"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_4").innerHTML = `
+			<div class="spesifikasi_button_chat" style="border:1px solid #d9d9d9;background:#d9d9d9;color:grey;cursor:not-allowed;"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_5").innerHTML = `
+			<div class="spesifikasi_button_chat" style="border:1px solid #d9d9d9;background:#d9d9d9;color:grey;cursor:not-allowed;"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_6").innerHTML = `
+			<div class="spesifikasi_button_chat" style="border:1px solid #d9d9d9;background:#d9d9d9;color:grey;cursor:not-allowed;"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+		document.getElementById("qty_stiker_custom").value = "";
+		document.getElementById("qty_stiker_minimal").innerHTML = "";
+
+		// update quantity button
+		document.getElementById("pesan_sekarang_custom").innerHTML = `
+		<div class="spesifikasi_button_chat" style="width: 250px;border:1px solid #d9d9d9;background:#d9d9d9;color:grey;cursor:not-allowed;"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+		`;
+	}
+
+	function harga_custom_enabled(panjang, lebar){
+		// //////////////////////////////////////////////////////////////
+    let panjang_mesin = 30;
+    let lebar_mesin = 45;
+    let jarak_antar_mata = 0.2;
+    // 1. ukuran cetak 
+    let panjang_produk = Math.ceil(panjang)+jarak_antar_mata;
+    let lebar_produk = Math.ceil(lebar)+jarak_antar_mata;
+    // 2. area cetak
+    let panjang_area = panjang_mesin+jarak_antar_mata;
+    let lebar_area = lebar_mesin+jarak_antar_mata;
+    
+    // 3. mata cetak
+    let mata_a_panjang = (panjang_area / panjang_produk >= 1) ? Math.floor(panjang_area / panjang_produk) : 0;
+    let mata_a_lebar = (lebar_area / lebar_produk >= 1) ? Math.floor(lebar_area / lebar_produk) : 0;
+    let mata_b_panjang = (panjang_area / lebar_produk >= 1) ? Math.floor(panjang_area / lebar_produk) : 0;
+    let mata_b_lebar = (lebar_area / panjang_produk >= 1) ? Math.floor(lebar_area / panjang_produk) : 0;
+    // 4. total mata
+    let total_mata_a = mata_a_panjang*mata_a_lebar;
+    let total_mata_b = mata_b_panjang*mata_b_lebar;
+    
+    // pilihan mata
+    let pilihan_mata = "";
+		let total_mata = 0;
+    if(total_mata_a > 0 && total_mata_b > 0){
+      if(total_mata_b > total_mata_a){
+        total_mata = total_mata_b;
+        pilihan_mata = "b";
+      } else {
+        total_mata = total_mata_a;
+        pilihan_mata = "a";
+      }
+    } else if(total_mata_a > 0){
+      total_mata = total_mata_a;
+      pilihan_mata = "a";
+    } else if(total_mata_b > 0){
+      total_mata = total_mata_b;
+      pilihan_mata = "b";
+    }
+		// //////////////////////////////////////////////////////////////
+		if(total_mata > 0){
+			custom_mata_cetak(total_mata, panjang, lebar)
+		} else {
+			harga_custom_disabled();
+		}
+	}
+
+	function custom_mata_cetak(quantity, panjang, lebar){
+		
+		let bahan = "";
+		let potong = "";
+		var radio_bahan = document.getElementsByName('pilihan_bahan');
+		for (var i = 0, length = radio_bahan.length; i < length; i++) {
+			if (radio_bahan[i].checked) {
+				bahan = radio_bahan[i].value;
+				break;
+			}
+		}
+
+		var radio_potong = document.getElementsByName('pilihan_potong');
+		for (var i = 0, length = radio_potong.length; i < length; i++) {
+			if (radio_potong[i].checked) {
+				 potong = radio_potong[i].value;
+				break;
+			}
+		}		
+		text_order = "Custom ("+"%20"+panjang+"%20"+"x"+"%20"+lebar+"%20"+"cm)"+"%20"+bahan.replace(" ", "%20")+"%20"+potong.replace(" ", "%20");
+		
+		document.getElementById("qty_1_stiker_table").innerHTML = quantity;
+		document.getElementById("qty_2_stiker_table").innerHTML = quantity*2;
+		document.getElementById("qty_3_stiker_table").innerHTML = quantity*3;
+		document.getElementById("qty_4_stiker_table").innerHTML = quantity*5;
+		document.getElementById("qty_5_stiker_table").innerHTML = quantity*10;
+		document.getElementById("qty_6_stiker_table").innerHTML = quantity*20;
+		
+		document.getElementById("qty_1_stiker_table_harga").innerHTML = "Rp. 15.000";
+		document.getElementById("qty_2_stiker_table_harga").innerHTML = "Rp. 30.000";
+		document.getElementById("qty_3_stiker_table_harga").innerHTML = "Rp. 45.000";
+		document.getElementById("qty_4_stiker_table_harga").innerHTML = "Rp. 75.000";
+		document.getElementById("qty_5_stiker_table_harga").innerHTML = "Rp. 150.000";
+		document.getElementById("qty_6_stiker_table_harga").innerHTML = "Rp. 300.000";
+
+		document.getElementById("pesan_sekarang_stiker_1").innerHTML = `
+			<div class="spesifikasi_button_chat"
+												onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity}%20pcs', '_blank')"
+												><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_2").innerHTML = `
+			<div class="spesifikasi_button_chat"
+												onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity*2}%20pcs', '_blank')"
+												><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_3").innerHTML = `
+			<div class="spesifikasi_button_chat"
+												onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity*3}%20pcs', '_blank')"
+												><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_4").innerHTML = `
+			<div class="spesifikasi_button_chat"
+												onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity*5}%20pcs', '_blank')"
+												><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_5").innerHTML = `
+			<div class="spesifikasi_button_chat"
+												onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity*10}%20pcs', '_blank')"
+												><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+			document.getElementById("pesan_sekarang_stiker_6").innerHTML = `
+			<div class="spesifikasi_button_chat"
+												onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity*20}%20pcs', '_blank')"
+												><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+			`;
+
+		// update pesan sekarang 1, 2, 3, 4, 5, 6
+
+		// custom quantity //////////////////////////////////////////////
+
+		// update quantity custom + minimal
+		document.getElementById("qty_stiker_custom").value = quantity;
+		document.getElementById("qty_stiker_minimal").innerHTML = quantity;
+
+		// update quantity button
+		document.getElementById("pesan_sekarang_custom").innerHTML = `
+		<div class="spesifikasi_button_chat" style="width: 250px;"
+											onclick="window.open('https://api.whatsapp.com/send?phone=6282111112748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%20Stiker%20ukuran%20${text_order}%20${quantity}%20pcs', '_blank')"
+											><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+		`;
 	}
 
 	</script>
