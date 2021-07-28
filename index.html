@@ -118,6 +118,11 @@
 			opacity: 0;
 			transition: all 1s;
 		}
+		.banner_custom {
+			display: none;
+			width: 0;
+			transition: all 1s;
+		}
 	</style>
 
 </head>
@@ -470,8 +475,11 @@
 
 		<!-- Content
 		============================================= -->
-		<div style="width:100%;max-width:1140px;margin:auto;max-height:200px;background:#d9d9d9;margin-bottom: 20px;">
-			<img src="images-banner/banner-website-01.png" alt="citramandiri cetak Keperluan anda" style="width: 100%;height: auto;">
+		<div style="width:100%;max-width:1140px;margin:auto;background:#d9d9d9;margin-bottom: 20px;position:relative;">
+			<img src="images-banner/banner-gotongroyongumkm.png" alt="citramandiri gotong royong ukm" class="banner_custom" style="height:auto;">
+			<img src="images-banner/banner-website-01.png" alt="citramandiri cetak Keperluan anda" class="banner_custom" style="height:auto;">
+			<!-- <img src="images-banner/banner-website-01.png" alt="citramandiri cetak Keperluan anda" style="width: 100%;height: auto;"> -->
+			<div style="position:absolute;"></div>
 		</div>
 
 		<section id="content">
@@ -740,6 +748,21 @@
 					</article>
 					
 					<article class="portfolio-item pf-uielements pf-media">
+						<div class="portfolio-image" onclick="location.href='produk/paper-rice-bowl';" style="cursor: pointer;">
+							<img src="images-baru/mockup-paper-rice-bowl-01.png" alt="Paper Rice Bowl">
+							
+							<div class="portfolio-overlay"><a href="produk/paper-rice-bowl"class="center-icon">
+								<!-- <i class="icon-line-ellipsis"></i> -->
+								<span>Order Now</span>
+								</a></div>
+						</div>
+						
+						<div class="portfolio-desc">
+							<h3><a href="produk/paper-rice-bowl">Paper Rice Bowl</a></h3>
+							<span><a href="produk/paper-rice-bowl">Mulai dari 1000/pcs min 1000 pcs</a></span></div>
+					</article>
+					
+					<article class="portfolio-item pf-uielements pf-media">
 						<div class="portfolio-image" onclick="location.href='produk/rice-box';" style="cursor: pointer;">
 							<img src="images-baru/mockup-rice-box-01.png" alt="Rice Box">
 							
@@ -755,18 +778,18 @@
 					</article>
 					
 					<article class="portfolio-item pf-uielements pf-media">
-						<div class="portfolio-image" onclick="location.href='produk/snack-box';" style="cursor: pointer;">
+						<div class="portfolio-image" onclick="location.href='produk/box-snack';" style="cursor: pointer;">
 							<img src="images-baru/mockup-snack-box-01.png" alt="Snack Box">
 							
-							<div class="portfolio-overlay"><a href="produk/snack-box"class="center-icon">
+							<div class="portfolio-overlay"><a href="produk/box-snack"class="center-icon">
 								<!-- <i class="icon-line-ellipsis"></i> -->
 								<span>Order Now</span>
 								</a></div>
 						</div>
 						
 						<div class="portfolio-desc">
-							<h3><a href="produk/snack-box">Snack Box</a></h3>
-							<span><a href="produk/snack-box">Mulai dari 1900/pcs min 1000 pcs</a></span></div>
+							<h3><a href="produk/box-snack">Snack Box</a></h3>
+							<span><a href="produk/box-snack">Mulai dari 1900/pcs min 1000 pcs</a></span></div>
 					</article>
 					
 					<article class="portfolio-item pf-uielements pf-media">
@@ -889,12 +912,11 @@
 							<span><a href="produk#.pf-kebutuhan-pemasaran">Kebutuhan Pemasaran</a></span></div>
 					</article>
 					
-					<article class="portfolio-item pf-graphics pf-uielements">
+					<!-- <article class="portfolio-item pf-graphics pf-uielements">
 						<div class="portfolio-image" onclick="location.href='produk/undangan-single-board';" style="cursor: pointer;">
 							<img src="images-new/produk-cmn/undangan-single-board.jpg" alt="Undangan Single Board">
 							
 							<div class="portfolio-overlay"><a href="produk/undangan-single-board"class="center-icon">
-								<!-- <i class="icon-line-ellipsis"></i> -->
 								<span>Order Now</span>
 								</a></div>
 						</div>
@@ -902,7 +924,7 @@
 						<div class="portfolio-desc">
 							<h3><a href="produk/undangan-single-board">Undangan Single Board</a></h3>
 							<span><a href="produk#.pf-lainnya">Lainnya</a></span></div>
-					</article>
+					</article> -->
 					
 					<!-- <article class="portfolio-item pf-graphics pf-uielements">
 						<div class="portfolio-image" onclick="location.href='produk/masker-custom';" style="cursor: pointer;">
@@ -1294,6 +1316,7 @@
 		$(document).ready(function(){
 			
 			var slides = document.getElementsByClassName("slider_custom");
+			var banner_slides = document.getElementsByClassName("banner_custom");
 
 			function durationSlider(s) {
 			
@@ -1319,7 +1342,31 @@
 
 			}
 
+			function bannerSlider(s) {
+			
+				for (i = 0; i < banner_slides.length; i++) {
+					banner_slides[i].style.display = "none";
+					banner_slides[i].style.width = 0;
+				}
+				
+				banner_slides[s].style.display = "block";
+				banner_slides[s].style.width = '100%';
+
+				setTimeout(() => {
+
+					var n = s + 1;
+					if(n == banner_slides.length){
+						n = 0;
+					}
+					
+					bannerSlider(n);
+					
+				}, 5000);
+
+			}
+
 			durationSlider(0);
+			bannerSlider(0);
 		});
 	</script>
 		
