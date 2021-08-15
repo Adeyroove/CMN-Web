@@ -36,6 +36,8 @@
 	
 	<link rel="stylesheet" href="../../demos/construction/css/colors.css" type="text/css" />
 
+	
+	<link rel="stylesheet" href="../../css/produk.css" type="text/css" />
 
 	<!-- Document Title
 	============================================= -->
@@ -130,7 +132,16 @@ gtag('config', 'UA-145006215-1');
 			}
 		}
 
+		.spesifikasi_produk_input_quote {
+			padding: 7px;
+			border-radius: 6px;
+			outline: none;
+			border: 1px solid darkgrey;
+			color: grey;
+		}
+
 	</style>
+	
 </head>
 <body class="stretched no-transition">
 
@@ -381,14 +392,37 @@ gtag('config', 'UA-145006215-1');
 
 								<!-- Product Single - Meta
 								============================================= -->
-								<div class="card product-meta">
+								<!-- <div class="card product-meta">
 									<div class="card-body"><span itemprop="productID"</span>
 										<span class="posted_in">Kategori: <a href="#" rel="tag">Kemasan</a></span>
 									</div>
-								</div><!-- Product Single - Meta End -->
+								</div> -->
+								<!-- Product Single - Meta End -->
 
 								<!-- Product Single - Share
 								============================================= -->
+
+								<div class="spesifikasi_title">Request Perhitungan Harga</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container">
+										<div>
+											<div>Panjang</div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_panjang" />
+										</div>
+									</div>
+									<div class="spesifikasi_flex_container">
+										<div>
+											<div>Lebar</div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_lebar" />
+										</div>
+									</div>
+									<div class="spesifikasi_flex_container">
+										<div>
+											<div>Tinggi</div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_tinggi" />
+										</div>
+									</div>
+								</div>
 							</div>
 			
 							<div class="col_one_fifth col_last custom_produk_klik">
