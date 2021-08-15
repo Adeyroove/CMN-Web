@@ -130,6 +130,30 @@ gtag('config', 'UA-145006215-1');
 			}
 		}
 
+		.request_spesifikasi_container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+  			flex-wrap: wrap;
+			padding: 5px 10px;
+		}
+
+		.request_spesifikasi_flex_container {
+			flex: 1;
+			margin: 0 5px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.spesifikasi_produk_input_quote {
+			padding: 5px 7px;
+			width: 100px;
+			outline: none;
+			border: 1px solid darkgrey;
+		}
+
 	</style>
 </head>
 <body class="stretched no-transition">
@@ -381,14 +405,107 @@ gtag('config', 'UA-145006215-1');
 
 								<!-- Product Single - Meta
 								============================================= -->
-								<div class="card product-meta">
+								<!-- <div class="card product-meta">
 									<div class="card-body"><span itemprop="productID"</span>
 										<span class="posted_in">Kategori: <a href="#" rel="tag">Kemasan</a></span>
 									</div>
-								</div><!-- Product Single - Meta End -->
+								</div> -->
+								<!-- Product Single - Meta End -->
 
 								<!-- Product Single - Share
 								============================================= -->
+
+								<div class="spesifikasi_title">Request Hitungan</div>
+								<div class="request_spesifikasi_container" style="margin-bottom: 10px;">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Panjang <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_panjang" type="number" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Lebar <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_lebar" type="number" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Tinggi <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_tinggi" type="number" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Unit</div>
+											<input disabled value="cm" class="spesifikasi_produk_input_quote" placeholder="" style="width:50px;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Warna <small>*</small></div>
+											<select class="spesifikasi_produk_input_quote" placeholder="" id="request_warna" style="width:175px;">
+												<option value="">pilih warna</option>
+												<option value="1 warna">1 warna (single color)</option>
+												<option value="2 warna">2 warna (double color)</option>
+												<option value="3 warna">3 warna (triple color)</option>
+												<option value="4 warna">4 warna (full color)</option>
+												<option value="4/1 warna">4/1 warna (depan full color belakang single color)</option>
+												<option value="4/2 warna">4/2 warna (depan full color belakang double color)</option>
+												<option value="4/3 warna">4/3 warna (depan full color belakang triple color)</option>
+												<option value="4/4 warna">4/4 warna (depan belakang full color)</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Quantity <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_qty" type="number" style="width:auto;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Nama <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_nama" style="width:auto;" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Telepon <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_tlp" type="number" style="width:auto;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Email</div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_email" style="width:auto;" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Brand</div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_brand" style="width:auto;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Catatan / Keterangan Lainnya</div>
+											<textarea rows="4" style="border: 1px solid darkgrey; width: 379px; padding:5px;" id="request_catatan"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container" style="justify-content: flex-end;padding-right: 35px;">
+									<div class="spesifikasi_button_chat" onclick="request_hitungan()"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Request Harga</div>
+								</div>
 							</div>
 			
 							<div class="col_one_fifth col_last custom_produk_klik">
@@ -807,6 +924,38 @@ gtag('config', 'UA-145006215-1');
 
 		});
 
+	</script>
+
+	<script>
+		function request_hitungan() {
+			let produk = "Box%20Donut";
+
+			let panjang = document.getElementById(`request_panjang`).value;
+			let lebar = document.getElementById(`request_lebar`).value;
+			let tinggi = document.getElementById(`request_tinggi`).value;
+
+			let warna = document.getElementById(`request_warna`).value;
+			let quantity = document.getElementById(`request_qty`).value;
+			
+			let nama = document.getElementById(`request_nama`).value;
+			let telepon = document.getElementById(`request_tlp`).value;
+			
+			let email = document.getElementById(`request_email`).value;
+			let brand = document.getElementById(`request_brand`).value;
+			
+			let catatan = document.getElementById(`request_catatan`).value;
+
+			if(panjang && lebar && tinggi && warna && quantity && nama && telepon) {
+				let ukuran = `${panjang}%20x%20${lebar}%20x%20${tinggi}%20cm`;
+				warna = warna.replace(" ", "%20");
+				nama = nama.replace(" ", "%20");
+				brand = brand.replace(" ", "%20");
+				catatan = catatan.replace(" ", "%20");
+				window.open(`https://api.whatsapp.com/send?phone=6281298986748&text=Halo%20CitramandiriSaya%20Mau%20Cetak%0AProduk%20:%20${produk}%0AUkuran%20(PxLxT)%20:%20${ukuran}%0AWarna%20:%20${warna}%0AQuantity%20:%20${quantity}%0ANama%20:%20${nama}%0ATelepon%20:%20${telepon}%0AEmail%20:%20${email}%0ABrand%20:%20${brand}%0ACatatan%20:%20${catatan}`);
+			} else {
+				alert("Mohon Lengkapi Spesifikasi / Data yang diperlukan");	
+			}
+		}
 	</script>
 		
 </body>
