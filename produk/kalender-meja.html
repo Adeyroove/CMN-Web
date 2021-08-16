@@ -131,6 +131,10 @@ gtag('config', 'UA-145006215-1');
 			}
 		}
 
+		.hide_container {
+			display: none !important;
+		}
+
 	</style>
 </head>
 <body class="stretched no-transition">
@@ -422,11 +426,11 @@ gtag('config', 'UA-145006215-1');
 								<div class="spesifikasi_container">
 									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_lembar_cont_1" onClick="select_lembar(1)">
 										<input type="radio" name="pilihan_lembar" value="7 Lembar" checked id="pilihan_lembar_input_1" />
-										<div>7 Lembar</div>
+										<div>7 Lembar (14 halaman)</div>
 									</div>
 									<div class="spesifikasi_flex_container" id="pilihan_lembar_cont_2" onClick="select_lembar(2)">
 										<input type="radio" name="pilihan_lembar" value="13 Lembar" id="pilihan_lembar_input_2" />
-										<div>13 Lembar</div>
+										<div>13 Lembar (26 halaman)</div>
 									</div>
 								</div>
 
@@ -441,18 +445,40 @@ gtag('config', 'UA-145006215-1');
 										<div>Dengan Laminasi</div>
 									</div>
 								</div>
+								<div class="spesifikasi_container hide_container" id="container_jenis_laminasi">
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_jenis_laminasi_cont_1" onClick="select_jenis_laminasi(1)">
+										<input type="radio" name="pilihan_jenis_laminasi" value="Doff" checked id="pilihan_jenis_laminasi_input_1" />
+										<div>Laminasi Doff</div>
+									</div>
+									<div class="spesifikasi_flex_container" id="pilihan_jenis_laminasi_cont_2" onClick="select_jenis_laminasi(2)">
+										<input type="radio" name="pilihan_jenis_laminasi" value="Glossy" id="pilihan_jenis_laminasi_input_2" />
+										<div>Laminasi Glossy</div>
+									</div>
+								</div>
 
-								<!-- <div class="spesifikasi_title">Pilihan Board</div>
+								<div class="spesifikasi_title">Warna Board</div>
 								<div class="spesifikasi_container">
-									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_board_cont_1" onClick="select_board(1)">
-										<input type="radio" name="pilihan_board" value="Board Standard" checked id="pilihan_board_input_1" />
-										<div>Standard</div>
+									<div class="spesifikasi_flex_container" id="pilihan_board_cont_1" onClick="select_board(1)">
+										<input type="radio" name="pilihan_board" value="Board Biru Navy" id="pilihan_board_input_1" />
+										<div>Biru Navy</div>
 									</div>
-									<div class="spesifikasi_flex_container" id="pilihan_board_cont_2" onClick="select_board(2)">
-										<input type="radio" name="pilihan_board" value="Board Ekonomis" id="pilihan_board_input_2" />
-										<div>Ekonomis</div>
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_board_cont_2" onClick="select_board(2)">
+										<input type="radio" name="pilihan_board" value="Board Hitam" checked id="pilihan_board_input_2" />
+										<div>Hitam</div>
 									</div>
-								</div> -->
+								</div>
+
+								<div class="spesifikasi_title">Warna Spiral</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_spiral_cont_1" onClick="select_spiral(1)">
+										<input type="radio" name="pilihan_spiral" value="Spiral Hitam" checked id="pilihan_spiral_input_1" />
+										<div>Hitam</div>
+									</div>
+									<div class="spesifikasi_flex_container" id="pilihan_spiral_cont_2" onClick="select_spiral(2)">
+										<input type="radio" name="pilihan_spiral" value="Spiral Putih" id="pilihan_spiral_input_2" />
+										<div>Putih</div>
+									</div>
+								</div>
 
 								<!-- <div class="spesifikasi_title">Promo Bundle</div>
 								<div class="spesifikasi_container">
@@ -1187,6 +1213,42 @@ gtag('config', 'UA-145006215-1');
 		update_harga();
 	}
 
+	function select_jenis_laminasi(id) {
+		for(var i = 1; i <= 2; i++){
+			if(i == id){
+				if(!document.getElementById(`pilihan_jenis_laminasi_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+					document.getElementById(`pilihan_jenis_laminasi_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+				}
+				document.getElementById(`pilihan_jenis_laminasi_input_${i}`).checked = true;
+			} else {
+				if(document.getElementById(`pilihan_jenis_laminasi_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+					document.getElementById(`pilihan_jenis_laminasi_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+				}
+				document.getElementById(`pilihan_jenis_laminasi_input_${i}`).checked = false;
+			}
+		}
+		// ubah_images();
+		update_harga();
+	}
+
+	function select_spiral(id) {
+		for(var i = 1; i <= 2; i++){
+			if(i == id){
+				if(!document.getElementById(`pilihan_spiral_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+					document.getElementById(`pilihan_spiral_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+				}
+				document.getElementById(`pilihan_spiral_input_${i}`).checked = true;
+			} else {
+				if(document.getElementById(`pilihan_spiral_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+					document.getElementById(`pilihan_spiral_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+				}
+				document.getElementById(`pilihan_spiral_input_${i}`).checked = false;
+			}
+		}
+		// ubah_images();
+		update_harga();
+	}
+
 	// select notes 
 	function select_notes(i) {
 		if(document.getElementById(`pilihan_notes_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
@@ -1216,6 +1278,9 @@ gtag('config', 'UA-145006215-1');
 		let orientasi = "";
 		let lembar = "";
 		let laminasi = "";
+		let jenis_laminasi = "";
+		let board = "";
+		let spiral = "";
 		// ////////////////////////////////////////////////////////////
 		var radio_ukuran = document.getElementsByName('pilihan_ukuran');
 		for (var i = 0, length = radio_ukuran.length; i < length; i++) {
@@ -1248,8 +1313,42 @@ gtag('config', 'UA-145006215-1');
 				break;
 			}
 		}
+		var radio_jenis_laminasi = document.getElementsByName('pilihan_jenis_laminasi');
+		for (var i = 0, length = radio_jenis_laminasi.length; i < length; i++) {
+			if (radio_jenis_laminasi[i].checked) {
+				jenis_laminasi = radio_jenis_laminasi[i].value;
+				break;
+			}
+		}
+		var radio_spiral = document.getElementsByName('pilihan_spiral');
+		for (var i = 0, length = radio_spiral.length; i < length; i++) {
+			if (radio_spiral[i].checked) {
+				spiral = radio_spiral[i].value;
+				break;
+			}
+		}
+		var radio_board = document.getElementsByName('pilihan_board');
+		for (var i = 0, length = radio_board.length; i < length; i++) {
+			if (radio_board[i].checked) {
+				board = radio_board[i].value;
+				break;
+			}
+		}
 		// ////////////////////////////////////////////////////////////
-		let pesan_text = "Kalender%20Meja%20Standard%20"+ukuran.replace(" ", "%20")+"%20"+orientasi.replace(" ", "%20")+"%20"+lembar.replace(" ", "%20")+"%20"+laminasi.replace(" ", "%20");
+		if(laminasi == "Dengan Laminasi"){
+			laminasi = laminasi + " " + jenis_laminasi;
+			if(document.getElementById(`container_jenis_laminasi`).classList.contains('hide_container')){
+					document.getElementById(`container_jenis_laminasi`).classList.remove('hide_container');
+				} else {
+					document.getElementById(`container_jenis_laminasi`).classList.add('hide_container');
+				}
+		} else {
+			if(!document.getElementById(`container_jenis_laminasi`).classList.contains('hide_container')){
+					document.getElementById(`container_jenis_laminasi`).classList.add('hide_container');
+				}
+		}
+		// ////////////////////////////////////////////////////////////
+		let pesan_text = "Kalender%20Meja%20Standard%20"+ukuran.replace(" ", "%20")+"%20"+orientasi.replace(" ", "%20")+"%20"+lembar.replace(" ", "%20")+"%20"+laminasi.replace(" ", "%20")+"%20"+board.replace(" ", "%20")+"%20"+spiral.replace(" ", "%20");
 		if(ukuran === "A5 (14.8 x 21 cm)" && orientasi === "Landscape" && lembar === "7 Lembar" && laminasi === "Tanpa Laminasi") {
 			document.getElementById("daftar_harga").innerHTML = `						
 												<table class="table table-striped table-bordered" style="margin-bottom:40px;">
