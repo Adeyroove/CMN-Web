@@ -131,6 +131,30 @@ gtag('config', 'UA-145006215-1');
 			}
 		}
 
+		.request_spesifikasi_container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+  			flex-wrap: wrap;
+			padding: 5px 10px;
+		}
+
+		.request_spesifikasi_flex_container {
+			flex: 1;
+			margin: 0 5px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.spesifikasi_produk_input_quote {
+			padding: 5px 7px;
+			width: 100px;
+			outline: none;
+			border: 1px solid darkgrey;
+		}
+
 	</style>
 </head>
 <body class="stretched no-transition">
@@ -393,7 +417,7 @@ gtag('config', 'UA-145006215-1');
 								<!-- Product Single - Share
 								============================================= -->
 
-								<div class="spesifikasi_title">Pilihan Ukuran</div>
+								<!-- <div class="spesifikasi_title">Pilihan Ukuran</div>
 								<div class="spesifikasi_container">
 									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_ukuran_cont_1" onClick="select_ukuran(1)">
 										<input type="radio" name="pilihan_ukuran" value="19 x 10 x 7,5 cm" checked id="pilihan_ukuran_input_1" />
@@ -436,6 +460,132 @@ gtag('config', 'UA-145006215-1');
 									<div class="spesifikasi_flex_container" style="opacity: 0;">
 										<input type="radio" name="pilihan_warna" value="Single Color" id="pilihan_warna_input_2" />
 										<div>Single Color</div>
+									</div>
+								</div> -->
+
+
+								<div class="spesifikasi_title">Request Hitungan</div>
+								<div class="request_spesifikasi_container" style="margin-bottom: 10px;">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Panjang <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_panjang" type="number" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Lebar <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_lebar" type="number" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Tinggi <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_tinggi" type="number" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Unit</div>
+											<input disabled value="cm" class="spesifikasi_produk_input_quote" placeholder="" style="width:50px;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Bahan <small>*</small></div>
+											<select class="spesifikasi_produk_input_quote" placeholder="" id="request_bahan" style="width:175px;">
+												<option selected value="Duplex">Duplex</option>
+												<option value="Ivory">Ivory</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Warna <small>*</small></div>
+											<select class="spesifikasi_produk_input_quote" placeholder="" id="request_warna" style="width:175px;">
+												<option value="">pilih warna</option>
+												<option value="1 warna">1 warna (luar single color)</option>
+												<option value="2 warna">2 warna (luar double color)</option>
+												<option value="3 warna">3 warna (luar triple color)</option>
+												<option value="4 warna">4 warna (luar full color)</option>
+												<option value="4/1 warna">4/1 warna (luar full color dalam single color)</option>
+												<option value="4/2 warna">4/2 warna (luar full color dalam double color)</option>
+												<option value="4/3 warna">4/3 warna (luar full color dalam triple color)</option>
+												<option value="4/4 warna">4/4 warna (luar dalam full color)</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Quantity <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_qty" type="number" style="width:auto;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Nama <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_nama" style="width:auto;" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Telepon <small>*</small></div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_tlp" type="number" style="width:auto;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Email</div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_email" style="width:auto;" />
+										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Brand</div>
+											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_brand" style="width:auto;" />
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container">
+									<div class="request_spesifikasi_flex_container">
+										<div>
+											<div style="margin-bottom:3px;">Catatan / Keterangan Lainnya</div>
+											<textarea rows="4" style="border: 1px solid darkgrey; width: 379px; padding:5px;" id="request_catatan"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="request_spesifikasi_container" style="justify-content: flex-end;padding-right: 35px;">
+									<div class="spesifikasi_button_chat" onclick="request_hitungan()"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Request Harga</div>
+								</div>
+								<div class="request_spesifikasi_container" style="justify-content: space-around;padding-top:35px;padding-bottom:35px;">
+									<div style="width: 60px;height: 60px; border-radius: 50%; background: #d9d9d9;position: relative;display: flex;justify-content: center;align-items: center;">
+										<i class="fa fa-money" style="font-size: 24px;color: cornflowerblue;"></i>
+										<div style="position: absolute; top: 104%; left: 0; right: 0;font-size: 11px; text-align: center;color: grey;">tidak ada biaya plat</div>
+									</div>
+									<div style="width: 60px;height: 60px; border-radius: 50%; background: #d9d9d9;position: relative;display: flex;justify-content: center;align-items: center;">
+										<i class="fa fa-cubes" style="font-size: 24px;color: cornflowerblue;"></i>
+										<div style="position: absolute; top: 104%; left: 0; right: 0;font-size: 11px; text-align: center;color: grey;">mulai dari 100 box</div>
+									</div>
+									<div style="width: 60px;height: 60px; border-radius: 50%; background: #d9d9d9;position: relative;display: flex;justify-content: center;align-items: center;">
+										<i class="fa fa-truck" style="font-size: 24px;color: cornflowerblue;"></i>
+										<div style="position: absolute; top: 104%; left: 0; right: 0;font-size: 11px; text-align: center;color: grey;">gratis ongkir</div>
+									</div>
+									<div style="width: 60px;height: 60px; border-radius: 50%; background: #d9d9d9;position: relative;display: flex;justify-content: center;align-items: center;">
+										<i class="fa fa-comments" style="font-size: 24px;color: cornflowerblue;"></i>
+										<div style="position: absolute; top: 104%; left: 0; right: 0;font-size: 11px; text-align: center;color: grey;">desain support</div>
 									</div>
 								</div>
 
@@ -1301,6 +1451,38 @@ gtag('config', 'UA-145006215-1');
 	}
 
 </script>
+
+	<script>
+		function request_hitungan() {
+			let produk = "Masker%20Box";
+
+			let panjang = document.getElementById(`request_panjang`).value;
+			let lebar = document.getElementById(`request_lebar`).value;
+			let tinggi = document.getElementById(`request_tinggi`).value;
+
+			let warna = document.getElementById(`request_warna`).value;
+			let quantity = document.getElementById(`request_qty`).value;
+			
+			let nama = document.getElementById(`request_nama`).value;
+			let telepon = document.getElementById(`request_tlp`).value;
+			
+			let email = document.getElementById(`request_email`).value;
+			let brand = document.getElementById(`request_brand`).value;
+			
+			let catatan = document.getElementById(`request_catatan`).value;
+
+			if(panjang && lebar && tinggi && warna && quantity && nama && telepon) {
+				let ukuran = `${panjang}%20x%20${lebar}%20x%20${tinggi}%20cm`;
+				warna = warna.replace(" ", "%20");
+				nama = nama.replace(" ", "%20");
+				brand = brand.replace(" ", "%20");
+				catatan = catatan.replace(" ", "%20");
+				window.open(`https://api.whatsapp.com/send?phone=6281298986748&text=Halo%20CitramandiriSaya%20Mau%20Cetak%0AProduk%20:%20${produk}%0AUkuran%20(PxLxT)%20:%20${ukuran}%0AWarna%20:%20${warna}%0AQuantity%20:%20${quantity}%0ANama%20:%20${nama}%0ATelepon%20:%20${telepon}%0AEmail%20:%20${email}%0ABrand%20:%20${brand}%0ACatatan%20:%20${catatan}`);
+			} else {
+				alert("Mohon Lengkapi Spesifikasi / Data yang diperlukan");	
+			}
+		}
+	</script>
 		
 </body>
 </html>
