@@ -523,8 +523,37 @@ gtag('config', 'UA-145006215-1');
 										
 									</div>
 								</div>
+								<div class="spesifikasi_title" style="margin-top:10px;margin-bottom:0;padding: 0 15px;">Pilihan Warna</div>
+								<div class="spesifikasi_container" style="padding: 0 10px;">
+									<div class="spesifikasi_flex_container" style="min-height:100px;background-image: url('../../images-baru/toning-toner/mockup-toning-toner-single-color.png');background-size: cover;background-position: 0 -12px;"></div>
+									<div class="spesifikasi_flex_container" style="min-height:100px;background-image: url('../../images-baru/toning-toner/mockup-toning-toner-double-color.png');background-size: cover;background-position: 0 -12px;"></div>
+								</div>
+								<div class="spesifikasi_container" style="padding: 0 10px;">
+									<div class="spesifikasi_flex_container" id="pilihan_color_cont_1" onClick="select_color(1)">
+										<input type="radio" name="pilihan_color" value="Single Color" id="pilihan_color_input_1" />
+										<div>Single Color</div>
+									</div>
+									<div class="spesifikasi_flex_container" id="pilihan_color_cont_2" onClick="select_color(2)">
+										<input type="radio" name="pilihan_color" value="Double Color" id="pilihan_color_input_2" />
+										<div>Double Color</div>
+									</div>
+								</div>
+								<div class="spesifikasi_container" style="padding: 0 10px;">
+									<div class="spesifikasi_flex_container" style="min-height:100px;background-image: url('../../images-baru/toning-toner/mockup-toning-toner-triple-color.png');background-size: cover;background-position: 0 -12px;"></div>
+									<div class="spesifikasi_flex_container" style="min-height:100px;background-image: url('../../images-baru/toning-toner/mockup-toning-toner-full-color.png');background-size: cover;background-position: 0 -12px;"></div>
+								</div>
+								<div class="spesifikasi_container" style="padding: 0 10px;">
+									<div class="spesifikasi_flex_container" id="pilihan_color_cont_3" onClick="select_color(3)">
+										<input type="radio" name="pilihan_color" value="Triple Color" id="pilihan_color_input_3" />
+										<div>Triple Color</div>
+									</div>
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_color_cont_4" onClick="select_color(4)">
+										<input type="radio" name="pilihan_color" value="Full Color" checked id="pilihan_color_input_4" />
+										<div>Full Color</div>
+									</div>
+								</div>
 								<div class="request_spesifikasi_container">
-									<div class="request_spesifikasi_flex_container" style="margin-bottom:3px;">
+									<!-- <div class="request_spesifikasi_flex_container" style="margin-bottom:3px;">
 										<div>
 											<div style="margin-bottom:3px;">Warna <small>*</small></div>
 											<select class="spesifikasi_produk_input_quote" placeholder="" id="request_warna" style="width:175px;">
@@ -540,12 +569,15 @@ gtag('config', 'UA-145006215-1');
 
 											</select>
 										</div>
-									</div>
+									</div> -->
 									<div class="request_spesifikasi_flex_container">
 										<div>
 											<div style="margin-bottom:3px;">Quantity <small>*</small></div>
 											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_qty" type="number" style="width:auto;" />
 										</div>
+									</div>
+									<div class="request_spesifikasi_flex_container">
+
 									</div>
 								</div>
 								<div class="request_spesifikasi_container">
@@ -1062,7 +1094,15 @@ gtag('config', 'UA-145006215-1');
 
 			let bahan = document.getElementById(`request_bahan`).value;
 
-			let warna = document.getElementById(`request_warna`).value;
+			let warna = ""; //document.getElementById(`request_warna`).value;
+			// ////////////////////////////////////////////////////////////
+			var radio_warna = document.getElementsByName('pilihan_color');
+			for (var i = 0, length = radio_warna.length; i < length; i++) {
+				if (radio_warna[i].checked) {
+					warna = radio_warna[i].value;
+					break;
+				}
+			}
 			let quantity = document.getElementById(`request_qty`).value;
 			
 			let nama = document.getElementById(`request_nama`).value;
@@ -1085,6 +1125,26 @@ gtag('config', 'UA-145006215-1');
 			}
 		}
 	</script>
+
+<script>
+	
+	function select_color(id) {
+		for(var i = 1; i <= 4; i++){
+			if(i == id){
+				if(!document.getElementById(`pilihan_color_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+					document.getElementById(`pilihan_color_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+				}
+				document.getElementById(`pilihan_color_input_${i}`).checked = true;
+			} else {
+				if(document.getElementById(`pilihan_color_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+					document.getElementById(`pilihan_color_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+				}
+				document.getElementById(`pilihan_color_input_${i}`).checked = false;
+			}
+		}
+		update_harga();
+	}
+</script>
 		
 </body>
 </html>
