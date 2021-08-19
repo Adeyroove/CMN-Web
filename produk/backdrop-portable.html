@@ -150,11 +150,67 @@ gtag('config', 'UA-145006215-1');
 			cursor: pointer;
 		}
 
-		.spesifikasi_produk_input_quote {
+		.request_spesifikasi_flex_ukuran_container {
+			flex: 1;
+			margin: 0 5px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.ukuran_produk_input {
 			padding: 5px 7px;
 			width: 100px;
 			outline: none;
 			border: 1px solid darkgrey;
+		}
+
+		.unit_produk_input {
+			padding: 5px 7px;
+			width: 50px;
+			outline: none;
+			border: 1px solid darkgrey;
+		}
+
+		.spesifikasi_produk_input_quote {
+			padding: 5px 7px;
+			width: 175px;
+			outline: none;
+			border: 1px solid darkgrey;
+		}
+
+		.spesifikasi_produk_input_quote_area {
+			width: 379px;
+		}
+
+		@media only screen and (max-width: 991px) {
+			.request_spesifikasi_flex_container {
+				width: 100%;
+				flex: initial;
+			}
+
+			.request_spesifikasi_flex_container div {
+				width: 100%;
+			}
+			
+			.ukuran_produk_input {
+				width: 100%;
+				min-width: 100px;
+			}
+			
+			.unit_produk_input {
+				width: 100%;
+			}
+
+			.spesifikasi_produk_input_quote {
+				width: 100% !important;
+				min-width: 175px;
+			}
+
+			.spesifikasi_produk_input_quote_area {
+				width: 100%;
+			}
 		}
 
 	</style>
@@ -418,27 +474,27 @@ gtag('config', 'UA-145006215-1');
 								
 								<div class="spesifikasi_title">Request Hitungan</div>
 								<div class="request_spesifikasi_container" style="margin-bottom: 10px;">
-									<div class="request_spesifikasi_flex_container">
+									<div class="request_spesifikasi_flex_ukuran_container">
 										<div>
 											<div style="margin-bottom:3px;">Panjang <small>*</small></div>
-											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_panjang" type="number" />
+											<input class="ukuran_produk_input" placeholder="" id="request_panjang" type="number" />
 										</div>
 									</div>
-									<div class="request_spesifikasi_flex_container">
+									<div class="request_spesifikasi_flex_ukuran_container">
 										<div>
 											<div style="margin-bottom:3px;">Lebar <small>*</small></div>
-											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_lebar" type="number" />
+											<input class="ukuran_produk_input" placeholder="" id="request_lebar" type="number" />
 										</div>
 									</div>
-									<div class="request_spesifikasi_flex_container">
+									<div class="request_spesifikasi_flex_ukuran_container">
 										<div>
 											<div style="margin-bottom:3px;">Unit</div>
-											<input disabled value="cm" class="spesifikasi_produk_input_quote" placeholder="" style="width:50px;" />
+											<input disabled value="cm" class="unit_produk_input" placeholder="" />
 										</div>
 									</div>
 								</div>
 								<div class="request_spesifikasi_container">
-									<div class="request_spesifikasi_flex_container">
+									<div class="request_spesifikasi_flex_container" style="margin-bottom:3px;">
 										<div>
 											<div style="margin-bottom:3px;">Warna <small>*</small></div>
 											<select class="spesifikasi_produk_input_quote" placeholder="" id="request_warna" style="width:175px;">
@@ -463,7 +519,7 @@ gtag('config', 'UA-145006215-1');
 									</div>
 								</div>
 								<div class="request_spesifikasi_container">
-									<div class="request_spesifikasi_flex_container">
+									<div class="request_spesifikasi_flex_container" style="margin-bottom:3px;">
 										<div>
 											<div style="margin-bottom:3px;">Nama <small>*</small></div>
 											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_nama" style="width:auto;" />
@@ -477,7 +533,7 @@ gtag('config', 'UA-145006215-1');
 									</div>
 								</div>
 								<div class="request_spesifikasi_container">
-									<div class="request_spesifikasi_flex_container">
+									<div class="request_spesifikasi_flex_container" style="margin-bottom:3px;">
 										<div>
 											<div style="margin-bottom:3px;">Email</div>
 											<input class="spesifikasi_produk_input_quote" placeholder="" id="request_email" style="width:auto;" />
@@ -494,7 +550,7 @@ gtag('config', 'UA-145006215-1');
 									<div class="request_spesifikasi_flex_container">
 										<div>
 											<div style="margin-bottom:3px;">Catatan / Keterangan Lainnya</div>
-											<textarea rows="4" style="border: 1px solid darkgrey; width: 379px; padding:5px;" id="request_catatan"></textarea>
+											<textarea rows="4" style="border: 1px solid darkgrey; padding:5px;" id="request_catatan" class="spesifikasi_produk_input_quote_area"></textarea>
 										</div>
 									</div>
 								</div>
