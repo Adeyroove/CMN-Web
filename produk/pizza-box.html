@@ -971,6 +971,8 @@ gtag('config', 'UA-145006215-1');
 			let lebar = document.getElementById(`request_lebar`).value;
 			let tinggi = document.getElementById(`request_tinggi`).value;
 
+			let bahan = document.getElementById(`request_bahan`).value;
+
 			let warna = document.getElementById(`request_warna`).value;
 			let quantity = document.getElementById(`request_qty`).value;
 			
@@ -982,13 +984,13 @@ gtag('config', 'UA-145006215-1');
 			
 			let catatan = document.getElementById(`request_catatan`).value;
 
-			if(panjang && lebar && tinggi && warna && quantity && nama && telepon) {
+			if(panjang && lebar && tinggi && warna && quantity && nama && telepon && bahan) {
 				let ukuran = `${panjang}%20x%20${lebar}%20x%20${tinggi}%20cm`;
 				warna = warna.replace(" ", "%20");
 				nama = nama.replace(" ", "%20");
 				brand = brand.replace(" ", "%20");
 				catatan = catatan.replace(" ", "%20");
-				window.open(`https://api.whatsapp.com/send?phone=6281298986748&text=Halo%20CitramandiriSaya%20Mau%20Cetak%0AProduk%20:%20${produk}%0AUkuran%20(PxLxT)%20:%20${ukuran}%0AWarna%20:%20${warna}%0AQuantity%20:%20${quantity}%0ANama%20:%20${nama}%0ATelepon%20:%20${telepon}%0AEmail%20:%20${email}%0ABrand%20:%20${brand}%0ACatatan%20:%20${catatan}`);
+				window.open(`https://api.whatsapp.com/send?phone=6281298986748&text=Halo%20Citramandiri%20Saya%20Mau%20Cetak%0AProduk%20:%20${produk}%0ABahan%20:%20${bahan}%0AUkuran%20(PxLxT)%20:%20${ukuran}%0AWarna%20:%20${warna}%0AQuantity%20:%20${quantity}%0ANama%20:%20${nama}%0ATelepon%20:%20${telepon}%0AEmail%20:%20${email}%0ABrand%20:%20${brand}%0ACatatan%20:%20${catatan}`);
 			} else {
 				alert("Mohon Lengkapi Spesifikasi / Data yang diperlukan");	
 			}
