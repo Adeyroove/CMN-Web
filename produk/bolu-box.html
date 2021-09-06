@@ -216,6 +216,67 @@ gtag('config', 'UA-145006215-1');
 			}
 		}
 
+		.custom-si-fb {
+			color: #666;
+			width: 40px;
+			transition: all 0.5s ease;
+			overflow: hidden;
+			padding-left: 20px;
+		}
+
+		.custom-si-fb div div.text_fbb {
+			display: none;
+		}
+
+		.si-social-content {
+			display:flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		.custom-si-fb:hover {
+			color: white;
+			background: cornflowerblue;
+			font-weight: 600;
+			width: 100px;
+		}
+
+		.custom-si-fb:hover div div.text_fbb {
+			display: block;
+		}
+
+		.custom-si-youtube {
+			color: #666;
+			padding-left: 20px;
+			padding-right: 20px;
+			transition: all 0.5s ease;
+		}
+
+		.custom-si-youtube:hover {
+			color: white;
+			background: #dc143c;
+			font-weight: 600;
+		}
+
+		.custom-si-instagram {
+			color: #666;
+			padding-left: 20px;
+			padding-right: 20px;
+			transition: all 0.5s ease;
+		}
+
+		.custom-si-instagram:hover {
+			color: white;
+			background: cornflowerblue;
+			font-weight: 600;
+		}
+		
+		@media only screen and (max-width: 768px) {
+			.si-social-content {
+				justify-content: center;
+			}
+		}
+
 	</style>
 	
 </head>
@@ -229,17 +290,28 @@ gtag('config', 'UA-145006215-1');
 		============================================= -->
 		<div id="top-bar">
 			<div class="container clearfix">
-				<div class="col_half nobottommargin clearfix">
-
-					<!-- Top Social
-					============================================= -->
-					<div id="top-social">
-						<ul>
-							<li><a href="https://www.facebook.com/citramandiri.id/" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-							<li><a href="https://www.youtube.com/channel/UCgFM_jNs2aeFwXqG7A1MpJQ" class="si-youtube"><span class="ts-icon"><i class="icon-youtube"></i></span><span class="ts-text">Youtube</span></a></li>
-							<li><a href="https://www.instagram.com/citramandiri.official/" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
-						</ul>
-					</div><!-- #top-social end -->
+					<div class="col_half nobottommargin clearfix">
+					<div class="si-social-content">
+						<a href="https://www.facebook.com/citramandiri.id/" class="custom-si-fb" target="_blank">
+							<div style="display:flex;justify-content: flex-start; align-items: center;">
+								<div class="ts-icon" style="margin-right: 3px;"><i class="icon-facebook"></i></div>
+								<div style="padding-bottom: 1px;" class="text_fbb">Facebook</div>
+							</div>
+						</a>
+							
+						<a href="https://www.youtube.com/channel/UCgFM_jNs2aeFwXqG7A1MpJQ" class="custom-si-youtube" target="_blank">
+							<div style="display:flex;justify-content: center; align-items: center;">
+								<div class="ts-icon" style="margin-right: 3px;"><i class="icon-youtube"></i></div>
+								<div style="padding-bottom: 1px;">Youtube</div>
+							</div>
+						</a>
+						<a href="https://www.instagram.com/citramandiriid/" class="custom-si-instagram" target="_blank">
+							<div style="display:flex;justify-content: center; align-items: center;">
+								<div class="ts-icon" style="margin-right: 3px;"><i class="icon-instagram2"></i></div>
+								<div style="padding-bottom: 1px;">Instagram</div>
+							</div>
+						</a>
+					</div>
 				</div>
 				
 				<div class="col_half fright col_last clearfix nobottommargin">
@@ -1183,27 +1255,27 @@ gtag('config', 'UA-145006215-1');
 						
 						<div class="widget subscribe-widget clearfix">
 							<div class="row">
-								<div class="col-lg-6 clearfix bottommargin-sm"><a href="https://www.facebook.com/citramandiri.id/" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+								<div class="col-lg-6 clearfix bottommargin-sm"><a href="https://www.facebook.com/citramandiri.id/" target="_blank" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
 										<i class="icon-facebook"></i>
 										<i class="icon-facebook"></i>
 									</a>
-									<a href="https://www.facebook.com/citramandiri.id/"><small style="display: block; margin-top: 3px;"><strong>Like us</strong>
+									<a href="https://www.facebook.com/citramandiri.id/" target="_blank"><small style="display: block; margin-top: 3px;"><strong>Like us</strong>
 										
 									<br>on Facebook</small></a></div>
 								
-								<div class="col-lg-6 clearfix bottommargin-sm"><a href="https://www.youtube.com/channel/UCgFM_jNs2aeFwXqG7A1MpJQ" class="social-icon si-dark si-colored si-youtube nobottommargin" style="margin-right: 10px;">
+								<div class="col-lg-6 clearfix bottommargin-sm"><a href="https://www.youtube.com/channel/UCgFM_jNs2aeFwXqG7A1MpJQ" target="_blank" class="social-icon si-dark si-colored si-youtube nobottommargin" style="margin-right: 10px;">
 										<i class="icon-youtube"></i>
 										<i class="icon-youtube"></i>
 									</a>
-									<a href="https://www.youtube.com/channel/UCgFM_jNs2aeFwXqG7A1MpJQ"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong>
+									<a href="https://www.youtube.com/channel/UCgFM_jNs2aeFwXqG7A1MpJQ" target="_blank"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong>
 										
 									<br>on Youtube</small></a></div>
 								
-								<div class="col-lg-6 clearfix"><a href="https://www.instagram.com/citramandiri.official/" class="social-icon si-dark si-colored si-instagram nobottommargin" style="margin-right: 10px;">
+								<div class="col-lg-6 clearfix"><a href="https://www.instagram.com/citramandiriid/" target="_blank" class="social-icon si-dark si-colored si-instagram nobottommargin" style="margin-right: 10px;">
 										<i class="icon-instagram"></i>
 										<i class="icon-instagram"></i>
 									</a>
-									<a href="https://www.instagram.com/citramandiri.official/"><small style="display: block; margin-top: 3px;"><strong>Follow us</strong>
+									<a href="https://www.instagram.com/citramandiriid/" target="_blank"><small style="display: block; margin-top: 3px;"><strong>Follow us</strong>
 										
 									<br>on Instagram</small></a></div>
 							</div>
