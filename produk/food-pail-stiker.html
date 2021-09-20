@@ -37,6 +37,9 @@
 	<link rel="stylesheet" href="../../demos/construction/css/colors.css" type="text/css" />
 
 
+	<link rel="stylesheet" href="../../css/produk.css" type="text/css" />
+
+
 	<!-- Document Title
 	============================================= -->
 	<title>Cetak Food Pail Murah | Citra Mandiri Percetakan Jakarta</title>
@@ -128,6 +131,10 @@ gtag('config', 'UA-145006215-1');
 			.deskripsi_spesifikasi_produk {
 				width: auto;
 			}
+		}
+
+		.pilihan_ukuran_custom_hide {
+			display: none !important;
 		}
 
 		.custom-si-fb {
@@ -692,6 +699,126 @@ gtag('config', 'UA-145006215-1');
 
 								<!-- Product Single - Share
 								============================================= -->
+
+								<div class="spesifikasi_title">Ukuran Food Pail</div>
+								<div class="spesifikasi_container">
+									<div style="min-height:64px;" class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_ukuran_cont_1" onClick="select_ukuran(1)">
+										<input type="radio" name="pilihan_ukuran" value="8 x 6,5 x 10,4 cm (Large)" checked id="pilihan_ukuran_input_1" />
+										<div>8 x 6,5 x 10,4 cm (Large)</div>
+									</div>
+									<div style="min-height:64px;" class="spesifikasi_flex_container" id="pilihan_ukuran_cont_2" onClick="select_ukuran(2)">
+										<input type="radio" name="pilihan_ukuran" value="8 x 6,5 x 8 cm (Medium)" id="pilihan_ukuran_input_2" />
+										<div>8 x 6,5 x 8 cm (Medium)</div>
+									</div>
+								</div>
+
+								<div class="spesifikasi_title" id="label_ukuran_stiker">Ukuran Stiker</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_ukuran_stiker_cont_1" onClick="select_ukuran_stiker(1)">
+										<input type="radio" name="pilihan_ukuran_stiker" value="4 x 4 cm" checked id="pilihan_ukuran_stiker_input_1" />
+										<div id="pilihan_ukuran_stiker_label_1">4 x 4 cm</div>
+									</div>
+									<div class="spesifikasi_flex_container" id="pilihan_ukuran_stiker_cont_2" onClick="select_ukuran_stiker(2)">
+										<input type="radio" name="pilihan_ukuran_stiker" value="4 x 6 cm" id="pilihan_ukuran_stiker_input_2" />
+										<div id="pilihan_ukuran_stiker_label_2">4 x 6 cm</div>
+									</div>
+								</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container" id="pilihan_ukuran_stiker_cont_3" onClick="select_ukuran_stiker(3)">
+										<input type="radio" name="pilihan_ukuran_stiker" value="5 x 5 cm" id="pilihan_ukuran_stiker_input_3" />
+										<div id="pilihan_ukuran_stiker_label_3">5 x 5 cm</div>
+									</div>
+									<div class="spesifikasi_flex_container" id="pilihan_ukuran_stiker_cont_4" onClick="select_ukuran_stiker(4)">
+										<input type="radio" name="pilihan_ukuran_stiker" value="6 x 8 cm" id="pilihan_ukuran_stiker_input_4" />
+										<div id="pilihan_ukuran_stiker_label_4">6 x 8 cm</div>
+									</div>
+								</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container" id="pilihan_ukuran_stiker_cont_5" onClick="select_ukuran_stiker(5)">
+										<input type="radio" name="pilihan_ukuran_stiker" value="10 x 10 cm" id="pilihan_ukuran_stiker_input_5" />
+										<div id="pilihan_ukuran_stiker_label_5">10 x 10 cm</div>
+									</div>
+									<div class="spesifikasi_flex_container" id="pilihan_ukuran_stiker_cont_6" onClick="select_ukuran_stiker(6)">
+										<input type="radio" name="pilihan_ukuran_stiker" value="Custom" id="pilihan_ukuran_stiker_input_6" />
+										<div>Custom</div>
+									</div>
+								</div>
+
+								<div class="pilihan_ukuran_custom_hide" id="pilihan_ukuran_custom_container" 
+									style="display: flex; justify-content: space-between;align-items: center;flex-wrap: wrap;
+									padding:5px;background: white;border-radius:6px;margin-top:7px;
+									border:1px solid cornflowerblue;
+									"
+								>
+									<div style="margin-right: 5px;width:203px;" id="ukuran_custom_stiker_panjang">
+										<div style="padding-left: 5px;margin-bottom:3px;" id="ukuran_custom_stiker_panjang_label">Custom Panjang (cm)</div>
+										<input 
+										id="ukuran_custom_panjang_stiker"
+										value="4"
+										onkeypress="return isNumberKey(event)"
+										onkeyup="update_ukuran()"
+										placeholder="panjang" style="background:#f5f5f5;border:1px solid #d9d9d9;border-radius:4px;width: 100%;padding:5px 10px;" />
+									</div>
+									<div style="width:203px;" id="ukuran_custom_stiker_lebar">
+										<div style="padding-left: 5px;margin-bottom:3px;">Custom Lebar (cm)</div>
+										<input 
+										id="ukuran_custom_lebar_stiker"
+										value="4"
+										onkeypress="return isNumberKey(event)"
+										onkeyup="update_ukuran()"
+										placeholder="lebar" style="background:#f5f5f5;border:1px solid #d9d9d9;border-radius:4px;width: 100%;padding:5px 10px;" />
+									</div>
+									<div id="ukuran_custom_stiker_minimal" style="width: 100%;font-size: 11px;padding-top:7px;color:darkgrey;">
+										* minimal ukuran 2 x 2 cm dan maksimal 30 x 45 cm
+									</div>
+								</div>
+
+								<div class="spesifikasi_title">Bahan Stiker</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_bahan_stiker_cont_1" onClick="select_bahan_stiker(1)">
+										<input type="radio" name="pilihan_bahan_stiker" value="Vinyl" checked id="pilihan_bahan_stiker_input_1" />
+										<div>Vinyl</div>
+									</div>
+									<div class="spesifikasi_flex_container" style="opacity:0;">
+										<input type="radio" />
+										<div>4 x 6 cm</div>
+									</div>
+								</div>
+
+								<div class="spesifikasi_title">Bentuk Stiker</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_bentuk_stiker_cont_1" onClick="select_bentuk_stiker(1)">
+										<input type="radio" name="pilihan_bentuk_stiker" value="Kotak" checked id="pilihan_bentuk_stiker_input_1" />
+										<div>Kotak</div>
+									</div>
+									<div class="spesifikasi_flex_container" id="pilihan_bentuk_stiker_cont_2" onClick="select_bentuk_stiker(2)">
+										<input type="radio" name="pilihan_bentuk_stiker" value="Bulat" id="pilihan_bentuk_stiker_input_2" />
+										<div>Bulat</div>
+									</div>
+								</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container" id="pilihan_bentuk_stiker_cont_3" onClick="select_bentuk_stiker(3)">
+										<input type="radio" name="pilihan_bentuk_stiker" value="Custom" id="pilihan_bentuk_stiker_input_3" />
+										<div>Custom</div>
+									</div>
+									<div class="spesifikasi_flex_container" style="opacity:0">
+										<input type="radio" />
+										<div>4 x 6 cm</div>
+									</div>
+								</div>
+
+								<div class="spesifikasi_title">Potong Stiker</div>
+								<div class="spesifikasi_container">
+									<div class="spesifikasi_flex_container spesifikasi_flex_container_active" id="pilihan_potong_stiker_cont_1" onClick="select_potong_stiker(1)">
+										<input type="radio" name="pilihan_potong_stiker" value="Kiss Cut" checked id="pilihan_potong_stiker_input_1" />
+										<div>Kiss Cut</div>
+									</div>
+									<div class="spesifikasi_flex_container" style="opacity:0">
+										<input type="radio" />
+										<div>4 x 6 cm</div>
+									</div>
+								</div>
+
 							</div>
 			
 							<div class="col_one_fifth col_last custom_produk_klik">
@@ -730,6 +857,54 @@ gtag('config', 'UA-145006215-1');
 									
 									<p class="notopmargin">Kami Selalu Memberikan Harga Terbaik</p>
 								</div>
+							</div>
+
+							<div class="col_full nobottommargin">
+
+							<div style="width:100%;background:#f5f5f5;padding:15px;margin-bottom:20px;display:flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;">
+								<div style="min-width:200px;">
+									
+									<div style="font-weight: 700;font-size: 24px;">Quantity Stiker</div>
+									<div style="margin-bottom:10px;display: flex; justify-content: flex-start; align-items: center;flex-wrap: wrap;">
+										<div style="display: flex; justify-content: flex-start; align-items: center;margin-right:15px;margin-bottom: 5px;">
+											<div style="cursor:pointer;font-size:12px;margin:5px;width:30px;height:30px;border-radius:50%;background:#d9d9d9;color:grey;display: flex; justify-content: center; align-items: center;">-</div>
+											<input id="qty_stiker_custom_stiker" style="width:75px;margin:5px;padding:5px;border:1px solid #d9d9d9;border-radius: 6px;text-align: center;" value="70" disabled />
+											<div style="cursor:pointer;font-size:12px;margin:5px;width:30px;height:30px;border-radius:50%;background:#d9d9d9;color:grey;display: flex; justify-content: center; align-items: center;">+</div>
+										</div>
+										
+										<!-- <div id="pesan_sekarang_custom">
+										<div class="spesifikasi_button_chat" style="width: 250px;"
+													onclick="pesan_sekarang()"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div></td>
+										</div> -->
+									</div>
+									<div style="margin-bottom: 40px;color:grey;font-size:12px;padding-left:15px;">quantity stiker didapatkan dari jumlah cetak didalam satu lembar A3</div>
+									<div id="mata_cetak_stiker" style="display: none;">70</div>
+									<div id="harga_cetak_stiker" style="display: none;">82000</div>
+								</div>
+
+								<div style="min-width:200px;">
+									
+									<div style="font-weight: 700;font-size: 24px;">Quantity Food Pail</div>
+									<div style="margin-bottom:10px;display: flex; justify-content: flex-start; align-items: center;flex-wrap: wrap;">
+										<div style="display: flex; justify-content: flex-start; align-items: center;margin-right:15px;margin-bottom: 5px;">
+											<div style="cursor:pointer;font-size:12px;margin:5px;width:30px;height:30px;border-radius:50%;background:cornflowerblue;color:white;display: flex; justify-content: center; align-items: center;" onClick="kurangi_custom()">-</div>
+											<input id="qty_stiker_custom" style="width:75px;margin:5px;padding:5px;border:1px solid #d9d9d9;border-radius: 6px;text-align: center;" value="25" disabled />
+											<div style="cursor:pointer;font-size:12px;margin:5px;width:30px;height:30px;border-radius:50%;background:cornflowerblue;color:white;display: flex; justify-content: center; align-items: center;" onClick="tambah_custom()">+</div>
+										</div>
+										
+										<!-- <div id="pesan_sekarang_custom">
+											<div class="spesifikasi_button_chat" style="width: 250px;" onclick="pesan_sekarang()"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div>
+										</div> -->
+									</div>
+									<div style="margin-bottom: 40px;color:grey;font-size:12px;padding-left:15px;">minimal <span id="qty_stiker_minimal">25</span> pcs (dan kelipatannya)</div>
+
+								</div>
+								<div style="min-width:200px;">
+									<div style="font-size: 33px;font-weight: 700;color: cornflowerblue;">Rp. <span id="total_harga_dengan_stiker">82,000</span></div>
+									<div class="spesifikasi_button_chat" style="width: 250px;" onclick="pesan_sekarang()"><i class="fa fa-paper-plane" style="margin-right: 5px;"></i>Pesan Sekarang</div>
+								</div>
+							</div>
+
 							</div>
 			
 							<div class="col_one_fifth col_last custom_produk_klik_mobile">
@@ -1105,6 +1280,392 @@ gtag('config', 'UA-145006215-1');
 			});
 
 		});
+
+	</script>
+
+	
+	<script>
+
+		// select ukuran 
+		function select_ukuran(id) {
+			for(var i = 1; i <= 2; i++){
+				if(i == id){
+					if(!document.getElementById(`pilihan_ukuran_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_ukuran_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_ukuran_input_${i}`).checked = true;
+				} else {
+					if(document.getElementById(`pilihan_ukuran_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_ukuran_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_ukuran_input_${i}`).checked = false;
+				}
+			}
+			update_ukuran();
+		}
+
+		function update_ukuran(){
+			// ///////////////////////////////////////////////////////////////////
+			let ukuran = "";
+			let bentuk = "";
+			var radio_ukuran = document.getElementsByName('pilihan_ukuran_stiker');
+			for (var i = 0, length = radio_ukuran.length; i < length; i++) {
+				if (radio_ukuran[i].checked) {
+					ukuran = radio_ukuran[i].value;
+					break;
+				}
+			}
+			var radio_bentuk = document.getElementsByName('pilihan_bentuk_stiker');
+			for (var i = 0, length = radio_bentuk.length; i < length; i++) {
+				if (radio_bentuk[i].checked) {
+					bentuk = radio_bentuk[i].value;
+					break;
+				}
+			}
+
+			let panjang = document.getElementById("ukuran_custom_panjang_stiker").value;
+			let lebar = document.getElementById("ukuran_custom_lebar_stiker").value;
+			let kali = Math.floor(document.getElementById("qty_stiker_custom").value/25);
+
+			if (ukuran === "Custom") {
+				if(document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.remove('pilihan_ukuran_custom_hide');
+				}
+			} else {
+				if(!document.getElementById(`pilihan_ukuran_custom_container`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`pilihan_ukuran_custom_container`).classList.add('pilihan_ukuran_custom_hide');
+				}
+			}
+
+			if(bentuk === "Bulat"){
+				document.getElementById("label_ukuran_stiker").innerHTML = "Ukuran Diameter Stiker";
+				document.getElementById("ukuran_custom_stiker_panjang_label").innerHTML = "Panjang Diameter (cm)";
+				document.getElementById("ukuran_custom_stiker_minimal").innerHTML = "* minimal ukuran 2 cm dan maksimal 30 cm";
+				
+				document.getElementById("pilihan_ukuran_stiker_label_1").innerHTML = "4 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_2").innerHTML = "4 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_3").innerHTML = "5 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_4").innerHTML = "6 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_5").innerHTML = "10 cm";
+
+				if(!document.getElementById(`ukuran_custom_stiker_lebar`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`ukuran_custom_stiker_lebar`).classList.add('pilihan_ukuran_custom_hide');
+				}
+
+				if (ukuran === "Custom") {
+					  if(panjang == 4){
+							document.getElementById("qty_stiker_custom_stiker").value = 70*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 70;
+						} else if(panjang == 5){
+							document.getElementById("qty_stiker_custom_stiker").value = 47*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 47;
+						} else if(panjang == 10){
+							document.getElementById("qty_stiker_custom_stiker").value = 12*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 12;
+						} else {
+							mata_cetak_stiker(panjang, panjang, kali);
+						}
+				} else {
+					if(ukuran === "4 x 4 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 70*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 70;
+					} else if(ukuran === "4 x 6 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 70*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 70;
+					} else if(ukuran === "5 x 5 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 47*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 47;
+					} else if(ukuran === "6 x 8 cm"){
+						mata_cetak_stiker(6, 6, kali);
+					} else if(ukuran === "10 x 10 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 12*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 12;
+					}
+
+				}
+			} else {
+				document.getElementById("label_ukuran_stiker").innerHTML = "Ukuran Stiker";
+				document.getElementById("ukuran_custom_stiker_panjang_label").innerHTML = "Custom Panjang (cm)";
+				document.getElementById("ukuran_custom_stiker_minimal").innerHTML = "* minimal ukuran 2 x 2 cm dan maksimal 30 x 45 cm";
+				
+				
+				document.getElementById("pilihan_ukuran_stiker_label_1").innerHTML = "4 x 4 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_2").innerHTML = "4 x 6 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_3").innerHTML = "5 x 5 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_4").innerHTML = "6 x 8 cm";
+				document.getElementById("pilihan_ukuran_stiker_label_5").innerHTML = "10 x 10 cm";
+
+				if(document.getElementById(`ukuran_custom_stiker_lebar`).classList.contains('pilihan_ukuran_custom_hide')){
+					document.getElementById(`ukuran_custom_stiker_lebar`).classList.remove('pilihan_ukuran_custom_hide');
+				}
+
+				if (ukuran === "Custom") {
+					  if(panjang == 4 && lebar == 4){
+							document.getElementById("qty_stiker_custom_stiker").value = 70*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 70;
+						} else if(panjang == 4 && lebar == 6){
+							document.getElementById("qty_stiker_custom_stiker").value = 40*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 40;
+						} else if(panjang == 5 && lebar == 5){
+							document.getElementById("qty_stiker_custom_stiker").value = 47*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 47;
+						} else if(panjang == 6 && lebar == 8){
+							document.getElementById("qty_stiker_custom_stiker").value = 22*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 22;
+						} else if(panjang == 10 && lebar == 10){
+							document.getElementById("qty_stiker_custom_stiker").value = 12*kali;
+							document.getElementById("mata_cetak_stiker").innerHTML = 12;
+						} else {
+							mata_cetak_stiker(panjang, lebar, kali);
+						}
+
+				} else {
+					if(ukuran === "4 x 4 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 70*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 70;
+					} else if(ukuran === "4 x 6 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 40*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 40;
+					} else if(ukuran === "5 x 5 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 47*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 47;
+					} else if(ukuran === "6 x 8 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 22*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 22;
+					} else if(ukuran === "10 x 10 cm"){
+						document.getElementById("qty_stiker_custom_stiker").value = 12*kali;
+						document.getElementById("mata_cetak_stiker").innerHTML = 12;
+					}
+				}
+			}
+			update_harga();
+		}
+
+		function mata_cetak_stiker(panjang, lebar, kali){
+			// //////////////////////////////////////////////////////////////
+			let panjang_mesin = 30;
+			let lebar_mesin = 45;
+			let jarak_antar_mata = 0.2;
+			// 1. ukuran cetak 
+			let panjang_produk = Math.ceil(panjang)+jarak_antar_mata;
+			let lebar_produk = Math.ceil(lebar)+jarak_antar_mata;
+			// 2. area cetak
+			let panjang_area = panjang_mesin+jarak_antar_mata;
+			let lebar_area = lebar_mesin+jarak_antar_mata;
+			
+			// 3. mata cetak
+			let mata_a_panjang = (panjang_area / panjang_produk >= 1) ? Math.floor(panjang_area / panjang_produk) : 0;
+			let mata_a_lebar = (lebar_area / lebar_produk >= 1) ? Math.floor(lebar_area / lebar_produk) : 0;
+			let mata_b_panjang = (panjang_area / lebar_produk >= 1) ? Math.floor(panjang_area / lebar_produk) : 0;
+			let mata_b_lebar = (lebar_area / panjang_produk >= 1) ? Math.floor(lebar_area / panjang_produk) : 0;
+			// 4. total mata
+			let total_mata_a = mata_a_panjang*mata_a_lebar;
+			let total_mata_b = mata_b_panjang*mata_b_lebar;
+			
+			// pilihan mata
+			let pilihan_mata = "";
+			let total_mata = 0;
+			if(total_mata_a > 0 && total_mata_b > 0){
+				if(total_mata_b > total_mata_a){
+					total_mata = total_mata_b;
+					pilihan_mata = "b";
+				} else {
+					total_mata = total_mata_a;
+					pilihan_mata = "a";
+				}
+			} else if(total_mata_a > 0){
+				total_mata = total_mata_a;
+				pilihan_mata = "a";
+			} else if(total_mata_b > 0){
+				total_mata = total_mata_b;
+				pilihan_mata = "b";
+			}
+			// //////////////////////////////////////////////////////////////
+			if(total_mata > 0){
+				document.getElementById("qty_stiker_custom_stiker").value = total_mata*kali;
+				document.getElementById("mata_cetak_stiker").innerHTML = total_mata;
+			} else {
+				document.getElementById("qty_stiker_custom_stiker").value = 0;
+				document.getElementById("mata_cetak_stiker").innerHTML = 0;
+			}
+			
+		}
+
+		function select_ukuran_stiker(id) {
+			for(var i = 1; i <= 6; i++){
+				if(i == id){
+					if(!document.getElementById(`pilihan_ukuran_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_ukuran_stiker_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_ukuran_stiker_input_${i}`).checked = true;
+				} else {
+					if(document.getElementById(`pilihan_ukuran_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_ukuran_stiker_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_ukuran_stiker_input_${i}`).checked = false;
+				}
+			}
+			update_ukuran();
+		}
+
+		function select_bahan_stiker(id) {
+			for(var i = 1; i <= 1; i++){
+				if(i == id){
+					if(!document.getElementById(`pilihan_bahan_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_bahan_stiker_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_bahan_stiker_input_${i}`).checked = true;
+				} else {
+					if(document.getElementById(`pilihan_bahan_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_bahan_stiker_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_bahan_stiker_input_${i}`).checked = false;
+				}
+			}
+			// update_harga();
+		}
+
+		function select_bentuk_stiker(id) {
+			for(var i = 1; i <= 3; i++){
+				if(i == id){
+					if(!document.getElementById(`pilihan_bentuk_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_bentuk_stiker_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_bentuk_stiker_input_${i}`).checked = true;
+				} else {
+					if(document.getElementById(`pilihan_bentuk_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_bentuk_stiker_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_bentuk_stiker_input_${i}`).checked = false;
+				}
+			}
+			update_ukuran();
+		}
+
+		function select_potong_stiker(id) {
+			for(var i = 1; i <= 1; i++){
+				if(i == id){
+					if(!document.getElementById(`pilihan_potong_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_potong_stiker_cont_${i}`).classList.add('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_potong_stiker_input_${i}`).checked = true;
+				} else {
+					if(document.getElementById(`pilihan_potong_stiker_cont_${i}`).classList.contains('spesifikasi_flex_container_active')){
+						document.getElementById(`pilihan_potong_stiker_cont_${i}`).classList.remove('spesifikasi_flex_container_active');
+					}
+					document.getElementById(`pilihan_potong_stiker_input_${i}`).checked = false;
+				}
+			}
+			// update_harga();
+		}
+		
+		function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
+		
+		function kurangi_custom() {
+			let quantity = parseInt(document.getElementById("qty_stiker_custom").value);
+			let quantity_stiker = parseInt(document.getElementById("qty_stiker_custom_stiker").value);
+			let mata_cetak_stiker = parseInt(document.getElementById("mata_cetak_stiker").innerHTML);
+			if(quantity > 25){
+				document.getElementById("qty_stiker_custom").value = quantity-25;
+				document.getElementById("qty_stiker_custom_stiker").value = quantity_stiker-mata_cetak_stiker;
+				update_harga();
+			}
+
+		}
+
+		function tambah_custom() {
+			let quantity = parseInt(document.getElementById("qty_stiker_custom").value);
+			let quantity_stiker = parseInt(document.getElementById("qty_stiker_custom_stiker").value);
+			let mata_cetak_stiker = parseInt(document.getElementById("mata_cetak_stiker").innerHTML);
+			document.getElementById("qty_stiker_custom").value = quantity+25;
+			document.getElementById("qty_stiker_custom_stiker").value = quantity_stiker+mata_cetak_stiker;
+			update_harga();
+		}
+
+		function update_harga(){
+			let harga = "";
+			var radio_harga = document.getElementsByName('pilihan_ukuran');
+			for (var i = 0, length = radio_harga.length; i < length; i++) {
+				if (radio_harga[i].checked) {
+					harga = radio_harga[i].value;
+					break;
+				}
+			}
+			
+			let quantity = parseInt(document.getElementById("qty_stiker_custom").value);
+
+			if(harga === "8 x 6,5 x 10,4 cm (Large)"){
+				document.getElementById("harga_cetak_stiker").innerHTML = 82000;
+				document.getElementById("total_harga_dengan_stiker").innerHTML = numberWithCommas(82000*(quantity/25));
+			} else {
+				document.getElementById("harga_cetak_stiker").innerHTML = 55750;
+				document.getElementById("total_harga_dengan_stiker").innerHTML = numberWithCommas(55750*(quantity/25));
+			}
+
+		}
+
+		function pesan_sekarang() {
+			let ukuran = "";
+			let ukuran_stiker = "";
+			let bahan = "";
+			let bentuk = "";
+			let potong = "";
+			var radio_ukuran = document.getElementsByName('pilihan_ukuran');
+			for (var i = 0, length = radio_ukuran.length; i < length; i++) {
+				if (radio_ukuran[i].checked) {
+					ukuran = radio_ukuran[i].value;
+					break;
+				}
+			}
+			var radio_ukuran_stiker = document.getElementsByName('pilihan_ukuran_stiker');
+			for (var i = 0, length = radio_ukuran.length; i < length; i++) {
+				if (radio_ukuran_stiker[i].checked) {
+					ukuran_stiker = radio_ukuran_stiker[i].value;
+					break;
+				}
+			}
+			var radio_bahan = document.getElementsByName('pilihan_bahan_stiker');
+			for (var i = 0, length = radio_bahan.length; i < length; i++) {
+				if (radio_bahan[i].checked) {
+					bahan = radio_bahan[i].value;
+					break;
+				}
+			}
+			var radio_bentuk = document.getElementsByName('pilihan_bentuk_stiker');
+			for (var i = 0, length = radio_bentuk.length; i < length; i++) {
+				if (radio_bentuk[i].checked) {
+					bentuk = radio_bentuk[i].value;
+					break;
+				}
+			}
+			var radio_potong = document.getElementsByName('pilihan_potong_stiker');
+			for (var i = 0, length = radio_potong.length; i < length; i++) {
+				if (radio_potong[i].checked) {
+					potong = radio_potong[i].value;
+					break;
+				}
+			}
+
+			let nama_produk = 'Food%20Pail';
+			let quantity = parseInt(document.getElementById("qty_stiker_custom").value);
+			let quantity_stiker = parseInt(document.getElementById("qty_stiker_custom_stiker").value);
+			window.open(`https://api.whatsapp.com/send?phone=6281298986748&text=Halo%20Citramandiri%20Saya%20Mau%20Order%20${nama_produk}%20${ukuran.replace(" ", "%20")}%20${numberWithCommas(quantity)}%20pcs%20(stiker%20${bahan.replace(" ", "%20")}%20${ukuran_stiker.replace(" ", "%20")}%20potong%20${bentuk.replace(" ", "%20")}%20${potong.replace(" ", "%20")}%20${numberWithCommas(quantity_stiker)}%20pcs)`, '_blank')
+		}
+
+		function numberWithCommas(x) {
+			if(x){
+				return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			} else {
+				return "0";
+			}
+		}
 
 	</script>
 		
